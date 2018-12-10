@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Netter_HTTP_Devices.Class_Device">
+    <Position X="1.75" Y="7" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAiAAgAAAQCAFMYoAQAgAAAAAggAgAAEgAEAAA=</HashCode>
+      <FileName>Class\Class_Device.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Netter_HTTP_Devices.Class_Device_Lighting_Lighting">
+    <Position X="1.75" Y="14" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAIAEAIAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Class\Class_Device_Lighting_Lighting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Netter_HTTP_Devices.Class_Device_Security_Door">
+    <Position X="5.75" Y="14" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAgAEAIgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Class\Class_Device_Security_Door.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Netter_HTTP_Devices.Class_Device_Security_Window">
+    <Position X="9.5" Y="14" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAgAEAIgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Class\Class_Device_Security_Window.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Netter_HTTP_Devices.Class_HTTPClient" BaseTypeListCollapsed="true">
+    <Position X="12" Y="2" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>IQAAEAACAAAAAEAAAFAIAQjAgAABARgQgAAACoCAgBA=</HashCode>
+      <FileName>Class\Class_HTTPClient.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Netter_HTTP_Devices.Page_Climate" BaseTypeListCollapsed="true">
+    <Position X="4" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAABAAgAAAAAAAAAAAIQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ClimatePages\Page_Climate.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Netter_HTTP_Devices.Page_Lighting" BaseTypeListCollapsed="true">
+    <Position X="1.75" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LightingPages\Page_Lighting.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Netter_HTTP_Devices.Page_Lighting_Lighting" BaseTypeListCollapsed="true">
+    <Position X="1.75" Y="4.5" Width="2.25" />
+    <InheritanceLine Type="System.Windows.Controls.Page" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="1.191" />
+        <Point X="4.75" Y="1.625" />
+        <Point X="3.766" Y="1.625" />
+        <Point X="3.766" Y="4.077" />
+        <Point X="3.312" Y="4.077" />
+        <Point X="3.312" Y="4.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAQAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LightingPages\Page_Lighting_Lighting.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Netter_HTTP_Devices.Page_Security" BaseTypeListCollapsed="true">
+    <Position X="6" Y="2" Width="1.75" />
+    <InheritanceLine Type="System.Windows.Controls.Page" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="1.191" />
+        <Point X="4.75" Y="1.625" />
+        <Point X="7.375" Y="1.625" />
+        <Point X="7.375" Y="2" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAABAAgAAAAAAAAAAAIQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SecurityPages\Page_Security.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Netter_HTTP_Devices.Page_Security_Door" BaseTypeListCollapsed="true">
+    <Position X="5.5" Y="4.75" Width="2.25" />
+    <InheritanceLine Type="System.Windows.Controls.Page" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="1.191" />
+        <Point X="4.75" Y="1.625" />
+        <Point X="7.91" Y="1.625" />
+        <Point X="7.91" Y="4.51" />
+        <Point X="7.312" Y="4.51" />
+        <Point X="7.312" Y="4.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAQAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SecurityPages\Page_Security_Door.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Netter_HTTP_Devices.Page_Security_Window" BaseTypeListCollapsed="true">
+    <Position X="5.5" Y="7" Width="2.25" />
+    <InheritanceLine Type="System.Windows.Controls.Page" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="1.191" />
+        <Point X="4.75" Y="1.625" />
+        <Point X="7.91" Y="1.625" />
+        <Point X="7.91" Y="6.76" />
+        <Point X="7.375" Y="6.76" />
+        <Point X="7.375" Y="7" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAQAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SecurityPages\Page_Security_Window.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Netter_HTTP_Devices.MainWindow" BaseTypeListCollapsed="true">
+    <Position X="8.5" Y="2" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIEAABAAAAAAMAAAAAAAAAAAICAAAAgAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Netter_HTTP_Devices.Window_Device" BaseTypeListCollapsed="true">
+    <Position X="8.5" Y="5.25" Width="3" />
+    <InheritanceLine Type="System.Windows.Window" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="10" Y="1.191" />
+        <Point X="10" Y="1.653" />
+        <Point X="8.34" Y="1.653" />
+        <Point X="8.34" Y="5.01" />
+        <Point X="10.375" Y="5.01" />
+        <Point X="10.375" Y="5.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>ACAoQAAAQBAIEEhABDAAAQBEZAgAAQIAAAaCAAIAKAA=</HashCode>
+      <FileName>Window_Device.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="System.Windows.Controls.Page" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Windows.Window" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

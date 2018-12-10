@@ -1,0 +1,82 @@
+﻿<UserControl x:Class="Netter_HTTP_Devices.UserControls.MenuButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Netter_HTTP_Devices.UserControls"
+             mc:Ignorable="d" 
+             Name="userControl"
+             Width="120" Height="130">
+
+    <UserControl.Resources>
+        <Color x:Key="DefaulBackgroundColor" A="#ff" R="#1e" G="#1e" B="#1e"/>
+        <SolidColorBrush x:Key="DefaultBackgroundBrush" Color="{StaticResource DefaulBackgroundColor}"/>
+
+        <Color x:Key="DefaulColor" A="#ff" R="#e1" G="#e1" B="#e1"/>
+        <SolidColorBrush x:Key="DefaultBrush" Color="{StaticResource DefaulColor}"/>
+
+        <SolidColorBrush x:Key="First_Brush" Color="{Binding First_Color, ElementName=userControl}"/>
+        <SolidColorBrush x:Key="Second_Brush" Color="{Binding Second_Color, ElementName=userControl}"/>
+
+        <LinearGradientBrush x:Key="GradientBrush" EndPoint="1,1" StartPoint="0,0">
+            <GradientStop Color="{Binding First_Color, ElementName=userControl}" Offset="0"/>
+            <GradientStop Color="{Binding Second_Color, ElementName=userControl}" Offset="1"/>
+        </LinearGradientBrush>
+
+<!--Rectangle-->
+        <Style TargetType="{x:Type Rectangle}">
+            <Setter Property="Width" Value="Auto"/>
+            <Setter Property="Height" Value="Auto"/>
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="RadiusX" Value="5"/>
+            <Setter Property="RadiusY" Value="5"/>
+            <Setter Property="Fill" Value="{StaticResource DefaultBackgroundBrush}"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsActive, ElementName=userControl}" Value="True">
+                    <Setter Property="Fill" Value="{StaticResource GradientBrush}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        
+<!--Border-->
+        <Style TargetType="{x:Type Border}">
+            <Setter Property="Width" Value="Auto"/>
+            <Setter Property="Height" Value="Auto"/>
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="CornerRadius" Value="5"/>
+            <Setter Property="BorderBrush" Value="{StaticResource DefaultBrush}"/>
+            <Setter Property="BorderThickness" Value="5"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsMouseOver, ElementName=userControl}" Value="True">
+                    <Setter Property="BorderThickness" Value="7" />
+                    <Setter Property="BorderBrush" Value="{StaticResource GradientBrush}"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding IsActive, ElementName=userControl}" Value="True">
+                    <Setter Property="BorderBrush" Value="{StaticResource GradientBrush}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Rectangle Grid.RowSpan="2"/>
+
+        <Border Grid.RowSpan="2"/>
+
+<!--Title-->
+        <Label Content="{Binding TitleContent, ElementName=userControl}" 
+               Grid.Row="1" Margin="0,0,0,5" HorizontalAlignment="Center"
+               Foreground="{StaticResource DefaultBrush}" 
+               FontFamily="Segoe UI" FontWeight="Bold" FontSize="10">
+        </Label>
+        
+<!--Path-->
+        <ContentControl Content="{Binding PathContent, ElementName=userControl}"
+                        Grid.Row="0" Margin="0,0,0,2" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,46 @@
+﻿<Page x:Class="Netter_HTTP_Devices.Page_Security"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:customcontrol="clr-namespace:Netter_HTTP_Devices.UserControls"
+      mc:Ignorable="d" 
+      MinHeight="300" MinWidth="130"
+      Height="Auto" Width="Auto"
+      d:DesignHeight="500" d:DesignWidth="130"
+      Title="Page_Security">
+    
+    <Page.Resources>
+        <ResourceDictionary Source="/Netter_HTTP_Devices;component/StyleResource.xaml"/>
+    </Page.Resources>
+
+    <Grid Background="Transparent">
+        <customcontrol:ScrollViewer x:Name="ScrollViewer_Types" TitleContent="ТИПЫ"
+                            First_Color="{StaticResource BorderColor}" Second_Color="{StaticResource Blue_First_Color}"
+                            Margin="10">
+            <customcontrol:ScrollViewer.MainContent>
+                <StackPanel>
+<!--Тип: Дверь-->
+                    <customcontrol:MenuButton ToolTip="Устройство: Дверь" Tag="0"
+                                        Margin="5"
+                                        First_Color="{StaticResource Blue_First_Color}" Second_Color="{StaticResource Blue_Second_Color}"
+                                        Click="Button_Door_Click">
+                        <customcontrol:MenuButton.PathContent>
+                            <Path Style="{StaticResource Path_Security_Door_Style}" Stroke ="{StaticResource BorderBrush}"/>
+                        </customcontrol:MenuButton.PathContent>
+                    </customcontrol:MenuButton>
+
+<!--Тип: Окно-->
+                    <customcontrol:MenuButton ToolTip="Устройство: Окно" Tag="1"
+                                        Margin="5"
+                                        First_Color="{StaticResource Blue_First_Color}" Second_Color="{StaticResource Blue_Second_Color}"
+                                        Click="Button_Window_Click">
+                        <customcontrol:MenuButton.PathContent>
+                            <Path Style="{StaticResource Path_Security_Window_Style}" Stroke ="{StaticResource BorderBrush}"/>
+                        </customcontrol:MenuButton.PathContent>
+                    </customcontrol:MenuButton>
+                    </StackPanel>
+            </customcontrol:ScrollViewer.MainContent>
+        </customcontrol:ScrollViewer>
+    </Grid>
+</Page>

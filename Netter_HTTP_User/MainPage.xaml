@@ -1,0 +1,67 @@
+﻿<Page x:Class="Netter_HTTP_User.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:customcontrol="clr-namespace:Netter_HTTP_User.CustomControls"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MainPage">
+
+    <Page.Resources>
+        <ResourceDictionary Source="StyleResource.xaml"/>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+
+
+        <!--Группы устройств-->
+        <customcontrol:ScrollViewer x:Name="ScrollViewer_Groups" TitleContent="ГРУППЫ" LeftScrollBar="True"
+                            First_Color="{StaticResource BorderColor}" Second_Color="{StaticResource BorderColor}"
+                            Grid.Column="0" Margin="10">
+            <customcontrol:ScrollViewer.MainContent>
+                <StackPanel>
+                    <!--Группа: Безопасность-->
+                    <customcontrol:MenuButton ToolTip="Группа устройств: Безопасность" Tag="0"
+                                        Margin="0,5"
+                                        First_Active_Color="{StaticResource Blue_First_Color}" Second_Active_Color="{StaticResource Blue_Second_Color}"
+                                        Click="Button_Click">
+                        <customcontrol:MenuButton.PathContent>
+                            <Path Style="{StaticResource Path_Security_Style}" Stroke ="{StaticResource BorderBrush}"/>
+                        </customcontrol:MenuButton.PathContent>
+                    </customcontrol:MenuButton>
+
+                    <!--Группа: Климат-->
+                    <customcontrol:MenuButton ToolTip="Группа устройств: Климат" Tag="1"
+                                        Margin="0,5"
+                                        First_Active_Color="{StaticResource Green_First_Color}" Second_Active_Color="{StaticResource Green_Second_Color}"
+                                        Click="Button_Click">
+                        <customcontrol:MenuButton.PathContent>
+                            <Path Style="{StaticResource Path_Climate_Style}" Stroke ="{StaticResource BorderBrush}"/>
+                        </customcontrol:MenuButton.PathContent>
+                    </customcontrol:MenuButton>
+                    <!--Группа: Освещение-->
+                    <customcontrol:MenuButton ToolTip="Группа устройств: Освещение" Tag="2"
+                                        Margin="0,5"
+                                        First_Active_Color="{StaticResource Orange_First_Color}" Second_Active_Color="{StaticResource Orange_Second_Color}"
+                                        Click="Button_Click">
+                        <customcontrol:MenuButton.PathContent>
+                            <Path Style="{StaticResource Path_Lighting_Style}" Stroke ="{StaticResource BorderBrush}"/>
+                        </customcontrol:MenuButton.PathContent>
+                    </customcontrol:MenuButton>
+                </StackPanel>
+            </customcontrol:ScrollViewer.MainContent>
+        </customcontrol:ScrollViewer>
+
+        <!--Типы устройств-->
+        <Frame Name="Frame_Types" 
+               Grid.Column="1"
+               NavigationUIVisibility="Hidden"
+               LoadCompleted="Frame_LoadCompleted" />
+    </Grid>
+</Page>

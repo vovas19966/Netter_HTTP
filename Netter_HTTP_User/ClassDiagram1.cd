@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Netter_HTTP_User.Class_HTTPClient">
+    <Position X="5.5" Y="10.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>IQAEEAACAAAAAEAAABAAAACEgAABARAQgAAAAgCAgBA=</HashCode>
+      <FileName>Class\Class_HTTPClient.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Netter_HTTP_User.Page_Lighting">
+    <Position X="9.25" Y="4.25" Width="3.25" />
+    <InheritanceLine Type="System.Windows.Controls.Page" FixedToPoint="true">
+      <Path>
+        <Point X="13" Y="3.191" />
+        <Point X="13" Y="3.867" />
+        <Point X="11.25" Y="3.867" />
+        <Point X="11.25" Y="4.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAABAAAAACAIMAAAARAAAAMAAAgAAAAAAAACEAAAKAA=</HashCode>
+      <FileName>LightingPages\Page_Lighting.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Netter_HTTP_User.Page_Lighting_Lighting">
+    <Position X="9.5" Y="15.75" Width="3.25" />
+    <InheritanceLine Type="System.Windows.Controls.Page" FixedToPoint="true">
+      <Path>
+        <Point X="13" Y="3.191" />
+        <Point X="13" Y="15.45" />
+        <Point X="11.375" Y="15.45" />
+        <Point X="11.375" Y="15.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>ACRBAAAAAAAAgEAAA1AAAABGBAgAAAQAAAAAAAAAKII=</HashCode>
+      <FileName>LightingPages\Page_Lighting_Lighting.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Netter_HTTP_User.Page_Security">
+    <Position X="9.5" Y="9.75" Width="3.25" />
+    <InheritanceLine Type="System.Windows.Controls.Page" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="13" Y="3.191" />
+        <Point X="13" Y="9.375" />
+        <Point X="11.312" Y="9.375" />
+        <Point X="11.312" Y="9.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAABAAgAACAIMAAAARIQAAMAAAgAAAAAAAAGAIAAKAA=</HashCode>
+      <FileName>SecurityPages\Page_Security.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Netter_HTTP_User.Page_Security_Door">
+    <Position X="13.25" Y="4.25" Width="3.25" />
+    <InheritanceLine Type="System.Windows.Controls.Page" FixedToPoint="true">
+      <Path>
+        <Point X="13" Y="3.191" />
+        <Point X="13" Y="3.867" />
+        <Point X="15.25" Y="3.867" />
+        <Point X="15.25" Y="4.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>ACRBAAAAAAAAgEAAA1AAAABGBAgAAAQAAAAAAAAAKII=</HashCode>
+      <FileName>SecurityPages\Page_Security_Door.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Netter_HTTP_User.Page_Security_Window">
+    <Position X="13.25" Y="10.75" Width="3.25" />
+    <InheritanceLine Type="System.Windows.Controls.Page" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="13" Y="3.191" />
+        <Point X="13" Y="10.26" />
+        <Point X="15.188" Y="10.26" />
+        <Point X="15.188" Y="10.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>ACRBAAAAAAAAgEAAA1AAAABGBAgAAAQAAAAAAAAAKII=</HashCode>
+      <FileName>SecurityPages\Page_Security_Window.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Netter_HTTP_User.MainPage">
+    <Position X="2.75" Y="4.25" Width="3" />
+    <InheritanceLine Type="System.Windows.Controls.Page" FixedToPoint="true">
+      <Path>
+        <Point X="13" Y="3.191" />
+        <Point X="13" Y="3.867" />
+        <Point X="4.625" Y="3.867" />
+        <Point X="4.625" Y="4.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAABAAAAMAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>MainPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Netter_HTTP_User.MainWindow">
+    <Position X="1.75" Y="8.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAIACAAAIEFgABBBAAAAEbAgAEAICAACAAICAKAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Netter_HTTP_User.PageDeviceList">
+    <Position X="6" Y="4.25" Width="3" />
+    <InheritanceLine Type="System.Windows.Controls.Page" FixedToPoint="true">
+      <Path>
+        <Point X="13" Y="3.191" />
+        <Point X="13" Y="3.867" />
+        <Point X="7.875" Y="3.867" />
+        <Point X="7.875" Y="4.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAgRAAAAAAAIMABAIRAAAAAAAAgIABACAAAAAAAAAAA=</HashCode>
+      <FileName>PageDeviceList.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Windows.Window" Collapsed="true">
+    <Position X="1.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.Controls.Page" Collapsed="true">
+    <Position X="12.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="5.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

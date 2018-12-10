@@ -1,0 +1,34 @@
+﻿<Page x:Class="Netter_HTTP_User.PageDeviceList"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:customcontrol="clr-namespace:Netter_HTTP_User.CustomControls"
+      mc:Ignorable="d" 
+      Height="Auto" Width="Auto" MinWidth="300"
+      d:DesignHeight="450" d:DesignWidth="400"
+      Title="PageDeviceList">
+
+    <Page.Resources>
+        <ResourceDictionary Source="/Netter_HTTP_User;component/StyleResource.xaml"/>
+    </Page.Resources>
+
+    <Grid Background="Transparent">
+
+        <customcontrol:ScrollViewer x:Name="ScrollViewer_DeviceList" TitleContent="СПИСОК УСТРОЙСТВ"
+                            First_Color="{StaticResource BorderColor}" Second_Color="{StaticResource BorderColor}"
+                            Margin="10">
+            <customcontrol:ScrollViewer.MainContent>
+                <ItemsControl ItemsSource="{Binding}" 
+                              Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="2" Margin="0,5">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <customcontrol:DeviceViewer Click="Device_Click" 
+                                                        FirstContent="{Binding Path=[0]}" SecondContent="{Binding Path=[1]}" ThirdContent="{Binding Path=[2]}"/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </customcontrol:ScrollViewer.MainContent>
+        </customcontrol:ScrollViewer>
+    </Grid>
+</Page>

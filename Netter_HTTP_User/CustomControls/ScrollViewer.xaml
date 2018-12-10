@@ -1,0 +1,243 @@
+﻿<UserControl x:Class="Netter_HTTP_User.CustomControls.ScrollViewer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Netter_HTTP_User.CustomControls"
+             mc:Ignorable="d" 
+             Name="userControl"
+             d:DesignHeight="120" d:DesignWidth="120">
+
+    <UserControl.Resources>
+        <Color x:Key="DefaulBackgroundColor" A="#ff" R="#1e" G="#1e" B="#1e"/>
+        <SolidColorBrush x:Key="DefaultBackgroundBrush" Color="{StaticResource DefaulBackgroundColor}"/>
+
+        <Color x:Key="DefaulColor" A="#ff" R="#e1" G="#e1" B="#e1"/>
+        <SolidColorBrush x:Key="DefaultBrush" Color="{StaticResource DefaulColor}"/>
+
+        <SolidColorBrush x:Key="First_Brush" Color="{Binding First_Color, ElementName=userControl}"/>
+        <SolidColorBrush x:Key="Second_Brush" Color="{Binding Second_Color, ElementName=userControl}"/>
+
+        <LinearGradientBrush x:Key="BorderGradientBrush" EndPoint="1,0" StartPoint="0,0">
+            <GradientStop Color="{Binding First_Color, ElementName=userControl}" Offset="0"/>
+            <GradientStop Color="{Binding First_Color, ElementName=userControl}" Offset="0.4"/>
+            <GradientStop Color="{Binding Second_Color, ElementName=userControl}" Offset="0.6"/>
+            <GradientStop Color="{Binding Second_Color, ElementName=userControl}" Offset="1"/>
+        </LinearGradientBrush>
+
+
+        <!-- ScrollViewer Rectangle -->
+        <Style x:Key="ScrollViewer_Rectangle" TargetType="{x:Type Rectangle}">
+            <Setter Property="Width" Value="Auto"/>
+            <Setter Property="Height" Value="Auto"/>
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="Fill" Value="{StaticResource DefaultBrush}"/>
+        </Style>
+        <Style x:Key="ScrollViewer_Radius_Rectangle" TargetType="{x:Type Rectangle}" BasedOn="{StaticResource ScrollViewer_Rectangle}">
+            <Setter Property="RadiusX" Value="5"/>
+            <Setter Property="RadiusY" Value="5"/>
+        </Style>
+
+
+        <!-- ScrollViwer Border -->
+        <Style x:Key="ScrollViwer_Border_Style" TargetType="{x:Type Border}">
+            <Setter Property="CornerRadius" Value="10" />
+            <Setter Property="BorderThickness" Value="3" />
+            <Setter Property="BorderBrush" Value="{StaticResource BorderGradientBrush}" />
+        </Style>
+
+        <!-- ScrollBar Thumb -->
+        <Style x:Key="ScrollBar_Left_Thumb_Style" TargetType="{x:Type Thumb}">
+            <Setter Property="IsTabStop" Value="False" />
+            <Setter Property="Focusable" Value="False" />
+            <Setter Property="Width" Value="12"/>
+            <Setter Property="BorderBrush" Value="{StaticResource DefaultBrush}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Thumb}">
+                        <Grid Width="{TemplateBinding Width}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Rectangle Style="{StaticResource ScrollViewer_Rectangle}" Fill="{TemplateBinding BorderBrush}" 
+                                       Grid.Column="1" Grid.ColumnSpan="2"/>
+                            <Rectangle Style="{StaticResource ScrollViewer_Radius_Rectangle}" Fill="{TemplateBinding BorderBrush}" 
+                                       Grid.Column="0" Grid.ColumnSpan="2"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ScrollBar_Right_Thumb_Style" TargetType="{x:Type Thumb}">
+            <Setter Property="IsTabStop" Value="False" />
+            <Setter Property="Focusable" Value="False" />
+            <Setter Property="Width" Value="11"/>
+            <Setter Property="BorderBrush" Value="{StaticResource DefaultBrush}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Thumb}">
+                        <Grid Width="{TemplateBinding Width}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Rectangle Style="{StaticResource ScrollViewer_Rectangle}" Fill="{TemplateBinding BorderBrush}" 
+                                       Grid.Column="0" Grid.ColumnSpan="2"/>
+                            <Rectangle Style="{StaticResource ScrollViewer_Radius_Rectangle}" Fill="{TemplateBinding BorderBrush}" 
+                                       Grid.Column="1" Grid.ColumnSpan="2"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- VerticalScrollBar -->
+        <Style x:Key="Left_Veritcal_ScrollBar_Style" TargetType="{x:Type ScrollBar}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ScrollBar}">
+                        <Grid>
+                            <Track Name="PART_Track" IsDirectionReversed="True">
+                                <Track.Thumb>
+                                    <Thumb x:Name="VerticalThumb" BorderBrush="{TemplateBinding BorderBrush}" Style="{StaticResource ScrollBar_Left_Thumb_Style}" />
+                                </Track.Thumb>
+                            </Track>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter TargetName="VerticalThumb" Property="Width" Value="14" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="Right_Veritcal_ScrollBar_Style" TargetType="{x:Type ScrollBar}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ScrollBar}">
+                        <Grid>
+                            <Track Name="PART_Track" IsDirectionReversed="True">
+                                <Track.Thumb>
+                                    <Thumb x:Name="VerticalThumb" BorderBrush="{TemplateBinding BorderBrush}" Style="{StaticResource ScrollBar_Right_Thumb_Style}" />
+                                </Track.Thumb>
+                            </Track>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter TargetName="VerticalThumb" Property="Width" Value="14" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+        <!-- ScrollViewer -->
+        <Style x:Key="ScrollViewer_Style" TargetType="ScrollViewer">
+            <Setter Property="HorizontalContentAlignment" Value="Left" />
+            <Setter Property="HorizontalScrollBarVisibility" Value="Disabled"/>
+            <Setter Property="VerticalContentAlignment" Value="Top" />
+            <Setter Property="VerticalScrollBarVisibility" Value="Auto" />
+            <Setter Property="BorderBrush" Value="{StaticResource First_Brush}"/>
+            <Setter Property="Width" Value="Auto" />
+            <Setter Property="Height" Value="Auto" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ScrollViewer">
+                        <Border Style="{StaticResource ScrollViwer_Border_Style}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+
+                                <ScrollContentPresenter Name="ScrollContentPresenter"
+                                                        Grid.Column="1" Margin="0,5"
+                                                        Cursor="{TemplateBinding Cursor}"
+                                                        ContentTemplate="{TemplateBinding ContentTemplate}" />
+
+                                <ScrollBar Name="PART_VerticalScrollBar"   
+                                           Style="{StaticResource Left_Veritcal_ScrollBar_Style}" Orientation="Vertical"
+                                           Grid.Column="0" Margin="3,10"
+                                           BorderBrush="{TemplateBinding BorderBrush}"
+                                           Value="{TemplateBinding VerticalOffset}"
+                                           Maximum="{TemplateBinding ScrollableHeight}"
+                                           ViewportSize="{TemplateBinding ViewportHeight}"
+                                           Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"/>
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <DataTrigger Binding="{Binding LeftScrollBar, ElementName=userControl}" Value="False">
+                                <Setter TargetName="PART_VerticalScrollBar" Property="Grid.Column" Value="2"/>
+                                <Setter TargetName="PART_VerticalScrollBar" Property="Style" Value="{DynamicResource Right_Veritcal_ScrollBar_Style}"/>
+                                <Setter Property="BorderBrush" Value="{StaticResource Second_Brush}"/>
+                            </DataTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+        <!-- Label -->
+        <Style x:Key="Title_Label_Style" TargetType="{x:Type Label}">
+            <Setter Property="Width" Value="Auto"/>
+            <Setter Property="Height" Value="Auto"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="{StaticResource First_Brush}"/>
+        </Style>
+
+
+        <!-- ScrollViewer Title -->
+        <Style x:Key="ScrollBar_Title_Style" TargetType="{x:Type Label}">
+            <Setter Property="Width" Value="Auto"/>
+            <Setter Property="Height" Value="Auto"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Label}">
+                        <Grid>
+                            <Rectangle Fill="{StaticResource DefaultBackgroundBrush}" Height="15" MinHeight="0"/>
+                            <Label x:Name="TitleLabel" Content="{TemplateBinding Content}"
+                                   Style="{StaticResource Title_Label_Style}"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <DataTrigger Binding="{Binding ElementName=TitleLabel, Path=Content}" Value="">
+                                <Setter Property="Width" Value="0"/>
+                                <Setter Property="Height" Value="0"/>
+                            </DataTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <ScrollViewer Name="MainScrollViewer" Grid.Row="1" Grid.RowSpan="2" Margin="0,1,0,0" Style="{StaticResource ScrollViewer_Style}">
+            <ContentPresenter Margin="5,0" Content="{Binding MainContent, ElementName=userControl}"/>
+        </ScrollViewer>
+
+        <Label Content="{Binding TitleContent, ElementName=userControl}"
+               Style="{StaticResource ScrollBar_Title_Style}"
+               Grid.Row="0" Grid.RowSpan="2"/>
+    </Grid>
+</UserControl>

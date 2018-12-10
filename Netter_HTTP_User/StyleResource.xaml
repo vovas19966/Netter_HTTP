@@ -1,0 +1,911 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Netter_HTTP_User">
+
+    <!--Color|Brush-->
+    <Color x:Key="BackgroundColor" A="#ff" R="#1e" G="#1e" B="#1e"/>
+    <SolidColorBrush x:Key="BackgroundBrush" Color="{StaticResource BackgroundColor}"/>
+
+    <Color x:Key="BorderColor" A="#ff" R="#e1" G="#e1" B="#e1"/>
+    <SolidColorBrush x:Key="BorderBrush" Color="{StaticResource BorderColor}"/>
+
+    <Color x:Key="ActiveBorderGroupColor" A="#ff" R="#00" G="#e1" B="#00"/>
+    <SolidColorBrush x:Key="ActiveBorderBrush" Color="{StaticResource ActiveBorderGroupColor}"/>
+
+    <Color x:Key="ImageColor" A="#ff" R="#e1" G="#e1" B="#e1"/>
+    <SolidColorBrush x:Key="ImageBrush" Color="{StaticResource ImageColor}"/>
+
+    <Color x:Key="ScrollViewerColor" A="#ff" R="#e1" G="#e1" B="#e1"/>
+    <SolidColorBrush x:Key="ScrollViewerBrush" Color="{StaticResource ScrollViewerColor}"/>
+
+    <Color x:Key="TextColor" A="#ff" R="#e1" G="#e1" B="#e1"/>
+    <SolidColorBrush x:Key="TextBrush" Color="{StaticResource TextColor}"/>
+    <Color x:Key="TextBorderColor" A="#ff" R="#1e" G="#1e" B="#1e"/>
+    <SolidColorBrush x:Key="TextBorderBrush" Color="{StaticResource TextBorderColor}"/>
+    <Color x:Key="TextTitleColor" A="#ff" R="#00" G="#ff" B="#ff"/>
+    <SolidColorBrush x:Key="TextTitleBrush" Color="{StaticResource TextTitleColor}"/>
+    <Color x:Key="TextIDColor" A="#ff" R="#ff" G="#00" B="#ff"/>
+    <SolidColorBrush x:Key="TextIDBrush" Color="{StaticResource TextIDColor}"/>
+
+
+
+
+    <!-- Border Gradients -->
+    <Color x:Key="Orange_First_Color" A="#ff" R="#f7" G="#a8" B="#22"/>
+    <Color x:Key="Orange_Second_Color" A="#ff" R="#e8" G="#33" B="#28"/>
+    <SolidColorBrush x:Key="Orange_First_Brush" Color="{StaticResource Orange_First_Color}"/>
+    <SolidColorBrush x:Key="Orange_Second_Brush" Color="{StaticResource Orange_Second_Color}"/>
+    <LinearGradientBrush x:Key="Orange_GradientBrush" EndPoint="1,1" StartPoint="0,0">
+        <GradientStop Color="{StaticResource Orange_First_Color}" Offset="0"/>
+        <GradientStop Color="{StaticResource Orange_Second_Color}" Offset="1"/>
+    </LinearGradientBrush>
+
+    <Color x:Key="Aqua_First_Color" A="#ff" R="#57" G="#f3" B="#c4"/>
+    <Color x:Key="Aqua_Second_Color" A="#ff" R="#53" G="#ca" B="#e0"/>
+    <SolidColorBrush x:Key="Aqua_First_Brush" Color="{StaticResource Aqua_First_Color}"/>
+    <SolidColorBrush x:Key="Aqua_Second_Brush" Color="{StaticResource Aqua_Second_Color}"/>
+    <LinearGradientBrush x:Key="Aqua_GradientBrush" EndPoint="1,1" StartPoint="0,0">
+        <GradientStop Color="{StaticResource Aqua_First_Color}" Offset="0"/>
+        <GradientStop Color="{StaticResource Aqua_Second_Color}" Offset="1"/>
+    </LinearGradientBrush>
+
+    <Color x:Key="Blue_First_Color" A="#ff" R="#43" G="#c5" B="#f6"/>
+    <Color x:Key="Blue_Second_Color" A="#ff" R="#31" G="#59" B="#c4"/>
+    <SolidColorBrush x:Key="Blue_First_Brush" Color="{StaticResource Blue_First_Color}"/>
+    <SolidColorBrush x:Key="Blue_Second_Brush" Color="{StaticResource Blue_Second_Color}"/>
+    <LinearGradientBrush x:Key="Blue_GradientBrush" EndPoint="1,1" StartPoint="0,0">
+        <GradientStop Color="{StaticResource Blue_First_Color}" Offset="0"/>
+        <GradientStop Color="{StaticResource Blue_Second_Color}" Offset="1"/>
+    </LinearGradientBrush>
+
+    <Color x:Key="Yellow_First_Color" A="#ff" R="#f5" G="#dd" B="#45"/>
+    <Color x:Key="Yellow_Second_Color" A="#ff" R="#fd" G="#6d" B="#0d"/>
+    <SolidColorBrush x:Key="Yellow_First_Brush" Color="{StaticResource Yellow_First_Color}"/>
+    <SolidColorBrush x:Key="Yellow_Second_Brush" Color="{StaticResource Yellow_Second_Color}"/>
+    <LinearGradientBrush x:Key="Yellow_GradientBrush" EndPoint="1,1" StartPoint="0,0">
+        <GradientStop Color="{StaticResource Yellow_First_Color}" Offset="0"/>
+        <GradientStop Color="{StaticResource Yellow_Second_Color}" Offset="1"/>
+    </LinearGradientBrush>
+
+    <Color x:Key="Green_First_Color" A="#ff" R="#bb" G="#d6" B="#2a"/>
+    <Color x:Key="Green_Second_Color" A="#ff" R="#01" G="#93" B="#45"/>
+    <SolidColorBrush x:Key="Green_First_Brush" Color="{StaticResource Green_First_Color}"/>
+    <SolidColorBrush x:Key="Green_Second_Brush" Color="{StaticResource Green_Second_Color}"/>
+    <LinearGradientBrush x:Key="Green_GradientBrush" EndPoint="1,1" StartPoint="0,0">
+        <GradientStop Color="{StaticResource Green_First_Color}" Offset="0"/>
+        <GradientStop Color="{StaticResource Green_Second_Color}" Offset="1"/>
+    </LinearGradientBrush>
+
+    <Color x:Key="Red_First_Color" A="#ff" R="#e4" G="#44" B="#46"/>
+    <Color x:Key="Red_Second_Color" A="#ff" R="#a1" G="#1d" B="#32"/>
+    <SolidColorBrush x:Key="Red_First_Brush" Color="{StaticResource Red_First_Color}"/>
+    <SolidColorBrush x:Key="Red_Second_Brush" Color="{StaticResource Red_Second_Color}"/>
+    <LinearGradientBrush x:Key="Red_GradientBrush" EndPoint="1,1" StartPoint="0,0">
+        <GradientStop Color="{StaticResource Red_First_Color}" Offset="0"/>
+        <GradientStop Color="{StaticResource Red_Second_Color}" Offset="1"/>
+    </LinearGradientBrush>
+
+    <!-- Path -->
+    <!--Безопасность-->
+    <Style x:Key="Path_Security_Style" TargetType="{x:Type Path}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="3,5,0,0"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="StrokeThickness" Value="6"/>
+        <Setter Property="Data">
+            <Setter.Value>
+                <PathGeometry>
+                    <PathFigure StartPoint="33,0">
+                        <ArcSegment Point="0,17" Size="60,40" IsLargeArc="False" SweepDirection="Clockwise" />
+                        <ArcSegment Point="33,74" Size="50,60" IsLargeArc="False" SweepDirection="Counterclockwise" />
+                        <ArcSegment Point="66,17" Size="50,60" IsLargeArc="False" SweepDirection="Counterclockwise" />
+                        <ArcSegment Point="33,0" Size="60,40" IsLargeArc="False" SweepDirection="Clockwise" />
+                        <ArcSegment Point="0,17" Size="60,40" IsLargeArc="False" SweepDirection="Clockwise" />
+                    </PathFigure>
+                </PathGeometry>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--Дверь-->
+    <Style x:Key="Path_Security_Door_Style" TargetType="{x:Type Path}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="5,3,0,0"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="StrokeThickness" Value="6"/>
+        <Setter Property="Data">
+            <Setter.Value>
+                <PathGeometry>
+                    <!-- дверь -->
+                    <PathFigure StartPoint="30,0">
+                        <LineSegment Point="50,0"/>
+                        <LineSegment Point="50,70" />
+                        <LineSegment Point="0,70" />
+                        <LineSegment Point="0,0" />
+                        <LineSegment Point="30,0" />
+                    </PathFigure>
+                    <!-- ручка -->
+                    <PathFigure StartPoint="40,40">
+                        <ArcSegment Point="35,40" Size="0.3,0.3" IsLargeArc="True" SweepDirection="Counterclockwise" />
+                        <ArcSegment Point="40,40" Size="0.3,0.3" IsLargeArc="True" SweepDirection="Counterclockwise" />
+                    </PathFigure>
+                    <PathFigure StartPoint="40,40">
+                        <LineSegment Point="30,40" />
+                    </PathFigure>
+                </PathGeometry>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--Пол-->
+    <Style x:Key="Path_Security_Floor_Style" TargetType="{x:Type Path}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="2,2,0,0"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="StrokeThickness" Value="6"/>
+        <Setter Property="Data">
+            <Setter.Value>
+                <PathGeometry>
+                    <PathFigure StartPoint="30,0">
+                        <LineSegment Point="60,0" />
+                        <LineSegment Point="60,60" />
+                        <LineSegment Point="0,60" />
+                        <LineSegment Point="0,0" />
+                        <LineSegment Point="30,0" />
+                    </PathFigure>
+                    <PathFigure StartPoint="0,30">
+                        <LineSegment Point="30,30" />
+                        <LineSegment Point="30,60" />
+                    </PathFigure>
+                    <PathFigure StartPoint="30,0">
+                        <LineSegment Point="30,30" />
+                        <LineSegment Point="60,30" />
+                    </PathFigure>
+                </PathGeometry>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--Окно-->
+    <Style x:Key="Path_Security_Window_Style" TargetType="{x:Type Path}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="2,2,0,0"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="StrokeThickness" Value="6"/>
+        <Setter Property="Data">
+            <Setter.Value>
+                <PathGeometry>
+                    <!-- окно -->
+                    <PathFigure StartPoint="30,0">
+                        <LineSegment Point="60,0" />
+                        <LineSegment Point="60,60" />
+                        <LineSegment Point="0,60" />
+                        <LineSegment Point="0,0" />
+                        <LineSegment Point="30,0" />
+                        <LineSegment Point="30,60" />
+                    </PathFigure>
+                    <!-- ручка -->
+                    <PathFigure StartPoint="30,27">
+                        <ArcSegment Point="30,33" Size="1,1" IsLargeArc="True" SweepDirection="Counterclockwise" />
+                        <ArcSegment Point="30,27" Size="1,1" IsLargeArc="True" SweepDirection="Counterclockwise" />
+                    </PathFigure>
+                    <PathFigure StartPoint="30,30">
+                        <LineSegment Point="40,30" />
+                    </PathFigure>
+                </PathGeometry>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <!--Климат-->
+    <Style x:Key="Path_Climate_Style" TargetType="{x:Type Path}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="10,13,0,0"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="StrokeThickness" Value="6"/>
+        <Setter Property="Data">
+            <Setter.Value>
+                <PathGeometry>
+                    <!-- контур термометра -->
+                    <PathFigure StartPoint="2,0">
+                        <ArcSegment Point="22,0" Size="1,1" IsLargeArc="False" SweepDirection="Clockwise" />
+                        <LineSegment Point="22,30" />
+                        <ArcSegment Point="2,30" Size="20,20" IsLargeArc="True" SweepDirection="Clockwise" />
+                        <LineSegment Point="2,0" />
+                    </PathFigure>
+                    <!-- наполнение -->
+                    <PathFigure StartPoint="0,58">
+                        <LineSegment Point="24,58" />
+                        <ArcSegment Point="0,58" Size="1,0.5" IsLargeArc="True" SweepDirection="Clockwise" />
+                        <LineSegment Point="24,58" />
+                    </PathFigure>
+                </PathGeometry>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--Освещение-->
+    <Style x:Key="Path_Lighting_Style" TargetType="{x:Type Path}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="18,31,0,0"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="StrokeThickness" Value="6"/>
+        <Setter Property="Data">
+            <Setter.Value>
+                <PathGeometry>
+                    <!-- лампа -->
+                    <PathFigure StartPoint="20,40">
+                        <LineSegment Point="0,40" />
+                        <LineSegment Point="0,50" />
+                        <LineSegment Point="20,50" />
+                        <LineSegment Point="20,20" />
+                        <ArcSegment Point="0,20" Size="25,25" IsLargeArc="True" SweepDirection="Counterclockwise" />
+                        <LineSegment Point="0,40" />
+                    </PathFigure>
+                    <!-- спираль -->
+                    <PathFigure StartPoint="10,40">
+                        <LineSegment Point="10,0" />
+                    </PathFigure>
+                    <!-- спираль -->
+                    <PathFigure StartPoint="0,0">
+                        <LineSegment Point="20,0" />
+                    </PathFigure>
+                </PathGeometry>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Пользователь -->
+    <Style x:Key="Path_User_Style" TargetType="{x:Type Path}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0,0,0,0"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="StrokeThickness" Value="6"/>
+        <Setter Property="Data">
+            <Setter.Value>
+                <PathGeometry>
+                    <PathFigure StartPoint="0,70">
+                        <LineSegment Point="1,50" />
+                        <ArcSegment Point="12,45" Size="15,10" IsLargeArc="False" SweepDirection="Clockwise" />
+                        <LineSegment Point="22,43" />
+                        <ArcSegment Point="48,43" Size="23,23" IsLargeArc="True" SweepDirection="Clockwise" />
+                        <LineSegment Point="58,45" />
+                        <ArcSegment Point="69,50" Size="15,10" IsLargeArc="False" SweepDirection="Clockwise" />
+                        <LineSegment Point="70,70" />
+                    </PathFigure>
+                </PathGeometry>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--Закрыть-->
+    <Style x:Key="Path_Exit_Style" TargetType="{x:Type Path}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="StrokeThickness" Value="3"/>
+        <Setter Property="Data">
+            <Setter.Value>
+                <PathGeometry>
+                    <PathFigure StartPoint="1,1">
+                        <LineSegment Point="15,15" />
+                    </PathFigure>
+                    <PathFigure StartPoint="15,1">
+                        <LineSegment Point="1,15" />
+                    </PathFigure>
+                </PathGeometry>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--ВКЛ/ВЫКЛ-->
+    <Style x:Key="Path_ONOFF_Style" TargetType="{x:Type Path}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="StrokeThickness" Value="3"/>
+        <Setter Property="Data">
+            <Setter.Value>
+                <PathGeometry>
+                    <PathFigure StartPoint="8,0">
+                        <LineSegment Point="8,7" />
+                    </PathFigure>
+                    <!-- контур термометра -->
+                    <PathFigure StartPoint="3,4">
+                        <ArcSegment Point="13,4" Size="7,7" IsLargeArc="true" SweepDirection="Counterclockwise" />
+                    </PathFigure>
+                </PathGeometry>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <!--Авторизация администратора-->
+    <Style x:Key="Path_Admin_Style" TargetType="{x:Type Path}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="StrokeThickness" Value="3"/>
+        <Setter Property="Data">
+            <Setter.Value>
+                <PathGeometry>
+                    <PathFigure StartPoint="7,10">
+                        <LineSegment Point="15,2" />
+                    </PathFigure>
+                    <PathFigure StartPoint="13,6">
+                        <LineSegment Point="14,7" />
+                    </PathFigure>
+                    <PathFigure StartPoint="11,6">
+                        <LineSegment Point="14,9" />
+                    </PathFigure>
+                    <PathFigure StartPoint="8,10">
+                        <ArcSegment Point="7,9" Size="4,4" IsLargeArc="true" SweepDirection="Clockwise" />
+                    </PathFigure>
+                </PathGeometry>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--На главную-->
+    <Style x:Key="Path_ToMain_Style" TargetType="{x:Type Path}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="StrokeThickness" Value="3"/>
+        <Setter Property="Data">
+            <Setter.Value>
+                <PathGeometry>
+                    <PathFigure StartPoint="9,13">
+                        <LineSegment Point="4,13"/>
+                        <LineSegment Point="4,5"/>
+
+                        <LineSegment Point="3.5,5"/>
+
+                        <LineSegment Point="9,0"/>
+
+                        <LineSegment Point="14.5,5"/>
+                        
+                        <LineSegment Point="14,5"/>
+                        <LineSegment Point="14,13"/>
+                        <LineSegment Point="9,13"/>
+                    </PathFigure>
+                </PathGeometry>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--Сохранить-->
+    <Style x:Key="Path_Save_Style" TargetType="{x:Type Path}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="StrokeThickness" Value="3"/>
+        <Setter Property="Data">
+            <Setter.Value>
+                <PathGeometry>
+                    <PathFigure StartPoint="9,15">
+                        <LineSegment Point="1,15"/>
+                        <LineSegment Point="1,1"/>
+                        <LineSegment Point="13,1"/>
+                        <LineSegment Point="15,3"/>
+                        <LineSegment Point="15,15"/>
+                        <LineSegment Point="9,15"/>
+                    </PathFigure>
+                    <PathFigure StartPoint="6,6">
+                        <LineSegment Point="10,6"/>
+                    </PathFigure>
+                </PathGeometry>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--Очистка-->
+    <Style x:Key="Path_Clear_Style" TargetType="{x:Type Path}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="StrokeThickness" Value="3"/>
+        <Setter Property="Data">
+            <Setter.Value>
+                <PathGeometry>
+                    <PathFigure StartPoint="8,15">
+                        <LineSegment Point="3,15"/>
+                        <LineSegment Point="3,3"/>
+                        <LineSegment Point="13,3"/>
+                        <LineSegment Point="13,15"/>
+                        <LineSegment Point="8,15"/>
+                    </PathFigure>
+                    <PathFigure StartPoint="0,2">
+                        <LineSegment Point="16,2"/>
+                    </PathFigure>
+                    <PathFigure StartPoint="6,1">
+                        <LineSegment Point="10,1"/>
+                    </PathFigure>
+                </PathGeometry>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+
+    <!-- Border -->
+    <Style x:Key="Border Style" TargetType="{x:Type Border}">
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="Margin" Value="3"/>
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="CornerRadius" Value="5"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="BorderThickness" Value="3"/>
+                <Setter Property="Margin" Value="3,2"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!--Label-->
+    <Style x:Key="Label_Style" TargetType="{x:Type Label}">
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="FontFamily" Value="Segoe UI"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
+    </Style>
+    
+    <Style x:Key="Label_Value_Style" TargetType="{x:Type Label}" BasedOn="{StaticResource Label_Style}">
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}"/>
+        <Setter Property="BorderThickness" Value="0,0,0,1.5"/>
+    </Style>
+
+
+    <Style x:Key="Label_Status_Style" TargetType="{x:Type Label}">
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="FontFamily" Value="Segoe UI"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
+        <Style.Triggers>
+            <Trigger Property="Content" Value="Активно">
+                <Setter Property="Foreground" Value="{StaticResource Green_Second_Brush}"/>
+            </Trigger>
+            <Trigger Property="Content" Value="Ожидается">
+                <Setter Property="Foreground" Value="{StaticResource Yellow_First_Brush}"/>
+            </Trigger>
+            <Trigger Property="Content" Value="Отсутствует">
+                <Setter Property="Foreground" Value="{StaticResource Red_First_Brush}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+
+    <!--TextBox-->
+    <Style x:Key="TextBox_Style" TargetType="{x:Type TextBox}">
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="MaxHeight" Value="100"/>
+        <Setter Property="FontFamily" Value="Segoe UI"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="3,2"/>
+        <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}"/>
+        <Setter Property="Background" Value="{StaticResource BackgroundBrush}"/>
+    </Style>
+    <Style x:Key="Bold_TextBox_Style" TargetType="{x:Type TextBox}" BasedOn="{StaticResource TextBox_Style}">
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="BorderThickness" Value="0"/>
+    </Style>
+
+    <Style x:Key="TextBox_MultiLine_Style" TargetType="{x:Type TextBox}">
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="FontFamily" Value="Segoe UI"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="3,2"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}"/>
+        <Setter Property="Background" Value="{StaticResource BackgroundBrush}"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="AcceptsReturn" Value="True"/>
+        <!-- разрешение на ввод enter -->
+        <Setter Property="HorizontalScrollBarVisibility" Value="Disabled"/>
+        <Setter Property="VerticalScrollBarVisibility" Value="Auto"/>
+    </Style>
+    <Style x:Key="Bold_TextBox_MultiLine_Style" TargetType="{x:Type TextBox}" BasedOn="{StaticResource TextBox_MultiLine_Style}">
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="MaxHeight" Value="100"/>
+    </Style>
+
+    <!-- ScrollBar Thumb -->
+    <Style x:Key="ScrollBarThumb_Style" TargetType="{x:Type Thumb}">
+        <Setter Property="IsTabStop" Value="False" />
+        <Setter Property="Focusable" Value="False" />
+        <Setter Property="Margin" Value="1" />
+        <Setter Property="BorderBrush" Value="{StaticResource ScrollViewerBrush}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Thumb}">
+                    <Rectangle Fill="{TemplateBinding BorderBrush}" 
+                                   Margin="1,2,2,2" 
+                                   />
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- VerticalScrollBar -->
+    <Style x:Key="Veritcal_ScrollBar_Style" TargetType="{x:Type ScrollBar}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ScrollBar}">
+                    <Grid>
+                        <Track Name="PART_Track" 
+                                   Grid.Row="1" 
+                                   IsDirectionReversed="True">
+                            <Track.Thumb>
+                                <Thumb Style="{StaticResource ScrollBarThumb_Style}" />
+                            </Track.Thumb>
+                        </Track>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- HorizontalScrollBar -->
+    <Style x:Key="Horizontal_ScrollBar_Style" TargetType="{x:Type ScrollBar}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ScrollBar}">
+                    <Grid>
+                        <Track Name="PART_Track" 
+                                   Grid.Row="1" 
+                                   IsDirectionReversed="False">
+                            <Track.Thumb>
+                                <Thumb Style="{StaticResource ScrollBarThumb_Style}" />
+                            </Track.Thumb>
+                        </Track>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- ScrollViewer -->
+    <Style x:Key="ScrollViewer_Style" TargetType="ScrollViewer">
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="HorizontalScrollBarVisibility" Value="Disabled"/>
+        <Setter Property="VerticalContentAlignment" Value="Top" />
+        <Setter Property="VerticalScrollBarVisibility" Value="Auto" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="Width" Value="Auto" />
+        <Setter Property="Height" Value="Auto" />
+        <Setter Property="Margin" Value="5" />
+        <Setter Property="BorderThickness" Value="2" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ScrollViewer">
+                    <Border CornerRadius="15"
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <ScrollContentPresenter x:Name="ScrollContentPresenter"
+                                                    Cursor="{TemplateBinding Cursor}"
+                                                    Margin="{TemplateBinding Padding}"
+                                                    ContentTemplate="{TemplateBinding ContentTemplate}" />
+
+                            <Rectangle Grid.ColumnSpan="2" 
+                                       Height="Auto" Width="Auto" Panel.ZIndex="-1" 
+                                       Fill="{TemplateBinding Background}" />
+
+                            <ScrollBar Name="PART_VerticalScrollBar"                                       
+                                       Style="{StaticResource Veritcal_ScrollBar_Style}"
+                                       Grid.Column="1" Grid.Row="0" Orientation="Vertical"
+                                       Value="{TemplateBinding VerticalOffset}"
+                                       Maximum="{TemplateBinding ScrollableHeight}"
+                                       ViewportSize="{TemplateBinding ViewportHeight}"
+                                       Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"/>
+                            <ScrollBar Name="PART_HorizontalScrollBar"
+                                       Style="{StaticResource Horizontal_ScrollBar_Style}"
+                                       Grid.Column="0" Grid.Row="1" Orientation="Horizontal"
+                                       Value="{TemplateBinding HorizontalOffset}"
+                                       Maximum="{TemplateBinding ScrollableWidth}"
+                                       ViewportSize="{TemplateBinding ViewportWidth}"
+                                       Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}" />
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <!-- TextBlock -->
+    <Style x:Key="TextBlockStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="Width" Value="Auto" />
+        <Setter Property="Height" Value="Auto" />
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="TextAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="{StaticResource BorderBrush}"/>
+        <Setter Property="Background" Value="Transparent"/>
+    </Style>
+
+    <!-- ComboBox -->
+    <!-- стиль списка -->
+    <Style TargetType="{x:Type ComboBoxItem}">
+        <Setter Property="SnapsToDevicePixels" Value="true" />
+        <Setter Property="Margin" Value="1"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}"/>
+        <Setter Property="Background" Value="{StaticResource BackgroundBrush}"/>
+        <Setter Property="OverridesDefaultStyle" Value="true"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ComboBoxItem">
+                    <Grid>
+                        <!-- Граница -->
+                        <Border Name="Border"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                CornerRadius="5"
+                                Width="Auto" Height="Auto" Margin="2">
+
+                            <TextBlock Name="TextBlock" Style="{StaticResource TextBlockStyle}"
+                                       VerticalAlignment="Center" HorizontalAlignment="Center"
+                                       Foreground="{TemplateBinding BorderBrush}"
+                                       Margin="3,2">
+                                       <ContentPresenter />
+                            </TextBlock>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsHighlighted" Value="True">
+                            <Setter TargetName="Border" Property="Border.BorderThickness" Value="2" />
+                            <Setter TargetName="Border" Property="Border.Margin" Value="2,0" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- кнопка разворота -->
+    <Style x:Key="ComboBoxToggleButton" TargetType="ToggleButton">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ToggleButton">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="40" />
+                        </Grid.ColumnDefinitions>
+                        <Border x:Name="Border"
+                                Grid.ColumnSpan="2"
+                                CornerRadius="5"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="2" />
+                        <Border
+                          Grid.Column="0"
+                          CornerRadius="0"
+                          Background="Transparent"
+                          BorderBrush="Transparent"
+                          BorderThickness="10" />
+                        <!-- Фигура -->
+                        <Path x:Name="Arrow"
+                              Width="Auto" Height="Auto" 
+                              StrokeThickness="2.5"
+                              Grid.Column="1"  
+                              HorizontalAlignment="Center" VerticalAlignment="Center"
+                              Data="M 20,2 26,2 20,8 14,2 20,2"
+                              Stroke="{TemplateBinding Foreground}" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Border" Property="Border.BorderThickness" Value="3" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter TargetName="Border" Property="Border.BorderThickness" Value="2" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <ControlTemplate x:Key="ComboBoxTextBox" TargetType="TextBox">
+        <Border x:Name="PART_ContentHost" Focusable="True" />
+    </ControlTemplate>
+    <Style x:Key="ComboBox_Style" TargetType="{x:Type ComboBox}">
+        <Setter Property="Margin" Value="3,2"/>
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+        <Setter Property="Background" Value="{StaticResource BackgroundBrush}" />
+        <Setter Property="SnapsToDevicePixels" Value="true"/>
+        <Setter Property="OverridesDefaultStyle" Value="true"/>
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled"/>
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Disabled"/>
+        <Setter Property="ScrollViewer.CanContentScroll" Value="True"/>
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="FontStyle" Value="Normal" />
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="Foreground" Value="{StaticResource BorderBrush}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ComboBox">
+                    <Grid>
+                        <ToggleButton
+                                Name="ToggleButton"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                Background="{TemplateBinding Background}"
+                                Foreground="{TemplateBinding Foreground}"
+                                Style="{StaticResource ComboBoxToggleButton}"
+                                Grid.Column="2"
+                                Focusable="false"
+                                IsChecked="{Binding Path=IsDropDownOpen,Mode=TwoWay,RelativeSource={RelativeSource TemplatedParent}}"
+                                ClickMode="Press">
+                        </ToggleButton>
+                        <ContentPresenter
+                                Name="ContentSite"
+                                IsHitTestVisible="False"
+                                Content="{TemplateBinding SelectionBoxItem}"
+                                ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                                ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+                                Margin="2,0,30,0"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center" />
+                        <TextBox x:Name="PART_EditableTextBox"
+                                Style="{StaticResource TextBox_Style}"
+                                Template="{StaticResource ComboBoxTextBox}"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Margin="0"
+                                Focusable="True"                               
+                                Visibility="Hidden"
+                                IsReadOnly="{TemplateBinding IsReadOnly}"/>
+                        <Popup
+                                Name="Popup"
+                                Placement="Bottom"
+                                IsOpen="{TemplateBinding IsDropDownOpen}"
+                                AllowsTransparency="True"
+                                Focusable="False"
+                                PopupAnimation="Slide">
+                            <Grid
+                                  Name="DropDown"
+                                  SnapsToDevicePixels="True"               
+                                  MinWidth="{TemplateBinding ActualWidth}"
+                                  MaxHeight="{TemplateBinding MaxDropDownHeight}">
+                                <Border
+                                        x:Name="DropDownBorder"
+                                        Background="{TemplateBinding Background}"
+                                        BorderThickness="2"
+                                    Margin="1"
+                                        BorderBrush="{TemplateBinding BorderBrush}"/>
+                                <ScrollViewer Margin="4,6,4,6" SnapsToDevicePixels="True">
+                                    <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained" />
+                                </ScrollViewer>
+                            </Grid>
+                        </Popup>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="HasItems" Value="false">
+                            <Setter TargetName="DropDownBorder" Property="MinHeight" Value="95"/>
+                        </Trigger>
+                        <Trigger Property="IsGrouping" Value="true">
+                            <Setter Property="ScrollViewer.CanContentScroll" Value="false"/>
+                        </Trigger>
+                        <Trigger SourceName="Popup" Property="Popup.AllowsTransparency" Value="true">
+                            <Setter TargetName="DropDownBorder" Property="CornerRadius" Value="4"/>
+                            <Setter TargetName="DropDownBorder" Property="Margin" Value="0,2,0,0"/>
+                        </Trigger>
+                        <Trigger Property="IsEditable" Value="true">
+                            <Setter Property="IsTabStop" Value="false"/>
+                            <Setter TargetName="PART_EditableTextBox" Property="Visibility"    Value="Visible"/>
+                            <Setter TargetName="ContentSite" Property="Visibility" Value="Hidden"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+        </Style.Triggers>
+    </Style>
+
+    <!-- Slider -->
+    <Style x:Key="SliderThumb_Style" TargetType="Thumb">
+        <Setter Property="SnapsToDevicePixels" Value="true"/>
+        <Setter Property="OverridesDefaultStyle" Value="false"/>
+        <Setter Property="Height" Value="18"/>
+        <Setter Property="Width" Value="18"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Thumb">
+                    <Ellipse  Stroke="{StaticResource BorderBrush}"
+                              StrokeThickness="3"
+                              Name="Ellipse"                               
+                              Fill="{StaticResource BorderBrush}" />
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Ellipse" Property="Fill" Value="{StaticResource BackgroundBrush}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="Slider" x:Key="Slider_Style">
+        <Setter Property="OverridesDefaultStyle" Value="true"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Slider">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" Name="row" />
+                            <RowDefinition Height="auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="*" Name="column" />
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
+                        <Border Name="PART_Border"
+                               BorderBrush="{StaticResource BorderBrush}" BorderThickness="1"
+                               Padding="2"
+                               CornerRadius="5"
+                               Grid.Row="1" Grid.Column="1"
+                               Width="{TemplateBinding Width}"
+                               Height="{TemplateBinding Height}"
+                               Background="{StaticResource BorderBrush}"
+                               HorizontalAlignment="Stretch"
+                               VerticalAlignment="Center" />
+                        <Track Name="PART_Track"
+                              HorizontalAlignment="Stretch"
+                              VerticalAlignment="Center"
+                              Grid.Row="1" Grid.Column="1"
+                              Width="{TemplateBinding Width}"
+                              Height="{TemplateBinding Height}">
+                            <Track.Thumb>
+                                <Thumb Style="{StaticResource SliderThumb_Style}" />
+                            </Track.Thumb>
+                        </Track>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
