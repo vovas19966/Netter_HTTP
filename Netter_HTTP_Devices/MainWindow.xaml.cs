@@ -1,5 +1,5 @@
 ﻿using Netter_HTTP_Devices.UserControls;
-//using Netter_HTTP_Server;
+using Netter_HTTP_Server;
 using System;
 using System.Linq;
 using System.Windows;
@@ -62,22 +62,22 @@ namespace Netter_HTTP_Devices
             Close();
         }
 
-        ////открыть серверное приложение
-        //private void OpenServer_Button_Click(object sender, RoutedEventArgs e)
-        //{
-        //    var server = App.Current.Windows.OfType<Netter_HTTP_Server.MainWindow>().FirstOrDefault();
+        //открыть серверное приложение
+        private void OpenServer_Button_Click(object sender, RoutedEventArgs e)
+        {
+            var server = App.Current.Windows.OfType<Netter_HTTP_Server.MainWindow>().FirstOrDefault();
 
-        //    //если нет открытого серверного приложения
-        //    if (server == null)
-        //    {
-        //        (new Netter_HTTP_Server.MainWindow()).Show();
-        //        (sender as MenuButton).IsActive = true;
-        //    }
-        //    else
-        //    {
-        //        (server as Netter_HTTP_Server.MainWindow).Activate();
-        //    }
-        //}
+            //если нет открытого серверного приложения
+            if (server == null)
+            {
+                (new Netter_HTTP_Server.MainWindow()).Show();
+                (sender as MenuButton).IsActive = true;
+            }
+            else
+            {
+                (server as Netter_HTTP_Server.MainWindow).Activate();
+            }
+        }
 
         //открыть пользовательское приложение
         private void OpenUser_Button_Click(object sender, RoutedEventArgs e)

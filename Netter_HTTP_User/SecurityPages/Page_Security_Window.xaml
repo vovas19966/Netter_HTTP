@@ -1,0 +1,158 @@
+﻿<Page x:Class="Netter_HTTP_User.Page_Security_Window"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:customcontrol="clr-namespace:Netter_HTTP_User.CustomControls"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page_Security_Window">
+
+    <Page.Resources>
+        <ResourceDictionary Source="/Netter_HTTP_User;component/StyleResource.xaml"/>
+    </Page.Resources>
+
+    <customcontrol:ScrollViewer x:Name="ScrollViewer_Options"
+                            First_Color="{StaticResource BorderColor}" Second_Color="{StaticResource BorderColor}"
+                            Margin="10">
+        <customcontrol:ScrollViewer.MainContent>
+            <Grid Margin="0">
+                <Grid.ColumnDefinitions>
+                    <!-- подпись -->
+                    <ColumnDefinition Width="Auto"/>
+                    <!-- отступ -->
+                    <ColumnDefinition Width="10"/>
+                    <!-- основное -->
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Название -->
+                <Label Content="Название"
+                       Grid.Column="0" Grid.Row="0"
+                       VerticalAlignment="Top"
+                       Style="{StaticResource Label_Style}" />
+
+                <Border Grid.Column="2" Grid.Row="0"  Style="{StaticResource Border Style}">
+                    <TextBox Style="{StaticResource Bold_TextBox_MultiLine_Style}"
+                             PreviewTextInput="TextBox_PreviewTextInput">
+                        <TextBox.Resources>
+                            <Style x:Key="VerticalScrollBar_TextBox" TargetType="{x:Type ScrollBar}" BasedOn="{StaticResource Veritcal_ScrollBar_Style}"/>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+
+                <!-- Расположение -->
+                <Label Content="Расположение"
+                       Grid.Column="0" Grid.Row="1"
+                       VerticalAlignment="Top"
+                       Style="{StaticResource Label_Style}" />
+
+                <Border Grid.Column="2" Grid.Row="1"  Style="{StaticResource Border Style}">
+                    <TextBox Style="{StaticResource Bold_TextBox_MultiLine_Style}"
+                             PreviewTextInput="TextBox_PreviewTextInput">
+                        <TextBox.Resources>
+                            <Style x:Key="VerticalScrollBar_TextBox" TargetType="{x:Type ScrollBar}" BasedOn="{StaticResource Veritcal_ScrollBar_Style}"/>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+
+                <!-- Положение -->
+                <Label Content="Положение"
+                       Grid.Column="0" Grid.Row="2"
+                       VerticalAlignment="Top"
+                       Style="{StaticResource Label_Style }" />
+
+                <ComboBox Grid.Column="2" Grid.Row="2" Style="{StaticResource ComboBox_Style}"/>
+
+                <!-- Адрес сeрвера -->
+                <Label Content="Адрес сeрвера" Visibility="Collapsed"
+                       Grid.Column="0" Grid.Row="3"
+                       Style="{StaticResource Label_Style}"/>
+
+                <Border Grid.Column="2" Grid.Row="3"  Visibility="Collapsed" Style="{StaticResource Border Style}">
+                    <TextBox Style="{StaticResource Bold_TextBox_Style}"
+                             PreviewTextInput="URI_PreviewTextInput"/>
+                </Border>
+
+                <!-- Период обновления данных на сервере -->
+                <Label Content="Период обновления данных" Visibility="Collapsed"
+                           Grid.Column="0" Grid.Row="4"
+                           Style="{StaticResource Label_Style}"/>
+
+                <Border Grid.Column="2" Grid.Row="4"  Visibility="Collapsed" Style="{StaticResource Border Style}">
+                    <TextBox Style="{StaticResource Bold_TextBox_Style}"
+                             PreviewTextInput="Number_PreviewTextInput"/>
+                </Border>
+
+                <!-- Время ожидания ответа -->
+                <Label Content="Время ожидания ответа" Visibility="Collapsed"
+                           Grid.Column="0" Grid.Row="5"
+                           Style="{StaticResource Label_Style}"/>
+
+                <Border Grid.Column="2" Grid.Row="5"  Visibility="Collapsed" Style="{StaticResource Border Style}">
+                    <TextBox Style="{StaticResource Bold_TextBox_Style}"
+                                 PreviewTextInput="Number_PreviewTextInput"/>
+                </Border>
+
+                <!-- Пауза для повторного запроса -->
+                <Label Content="Пауза для повторного запроса" Visibility="Collapsed"
+                           Grid.Column="0" Grid.Row="6"
+                           Style="{StaticResource Label_Style}"/>
+
+                <Border Grid.Column="2" Grid.Row="6"  Visibility="Collapsed" Style="{StaticResource Border Style}">
+                    <TextBox Style="{StaticResource Bold_TextBox_Style}"
+                                 PreviewTextInput="Number_PreviewTextInput"/>
+                </Border>
+
+                <!-- Кол-во повторных запросов -->
+                <Label Content="Кол-во повторных запросов" Visibility="Collapsed"
+                           Grid.Column="0" Grid.Row="7"
+                           Style="{StaticResource Label_Style}"/>
+
+                <Border Grid.Column="2" Grid.Row="7"  Visibility="Collapsed" Style="{StaticResource Border Style}">
+                    <TextBox Style="{StaticResource Bold_TextBox_Style}"
+                             PreviewTextInput="Number_PreviewTextInput"/>
+                </Border>
+
+                <Grid Grid.Column="2" Grid.Row="8" HorizontalAlignment="Right">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <!-- Кнопка сохранения -->
+                    <customcontrol:ControlButton ToolTip="Применить изменения"
+                                         Margin="5" Grid.Column="0" 
+                                         First_Active_Color="{StaticResource Green_First_Color}" Second_Active_Color="{StaticResource Green_Second_Color}"
+                                         First_InActive_Color="{StaticResource Green_First_Color}" Second_InActive_Color="{StaticResource Green_Second_Color}"
+                                         Click="Save_Click">
+                        <customcontrol:ControlButton.PathContent>
+                            <Path Style="{StaticResource Path_Save_Style}" Stroke ="{StaticResource BorderBrush}"/>
+                        </customcontrol:ControlButton.PathContent>
+                    </customcontrol:ControlButton>
+                    <!--Кнопка отключения устройства-->
+                    <customcontrol:ControlButton ToolTip="Отключить устройство"
+                                         Margin="5" Grid.Column="1" 
+                                         First_Active_Color="{StaticResource Red_First_Color}" Second_Active_Color="{StaticResource Red_Second_Color}"
+                                         First_InActive_Color="{StaticResource Red_First_Color}" Second_InActive_Color="{StaticResource Red_Second_Color}"
+                                         Click="Delete_Click">
+                        <customcontrol:ControlButton.PathContent>
+                            <Path Style="{StaticResource Path_Exit_Style}" Stroke ="{StaticResource BorderBrush}"/>
+                        </customcontrol:ControlButton.PathContent>
+                    </customcontrol:ControlButton>
+                </Grid>
+            </Grid>
+        </customcontrol:ScrollViewer.MainContent>
+    </customcontrol:ScrollViewer>
+</Page>

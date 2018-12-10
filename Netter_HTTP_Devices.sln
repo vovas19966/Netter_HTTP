@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netter_HTTP_Devices", "Nett
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netter_HTTP_User", "Netter_HTTP_User\Netter_HTTP_User.csproj", "{17D853C6-CBDA-45B7-8D47-A6E60F5B10DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netter_HTTP_Server", "Netter_HTTP_Server\Netter_HTTP_Server.csproj", "{96D0BB24-CF83-4059-ADD8-D09C91BF0648}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{17D853C6-CBDA-45B7-8D47-A6E60F5B10DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17D853C6-CBDA-45B7-8D47-A6E60F5B10DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17D853C6-CBDA-45B7-8D47-A6E60F5B10DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96D0BB24-CF83-4059-ADD8-D09C91BF0648}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96D0BB24-CF83-4059-ADD8-D09C91BF0648}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96D0BB24-CF83-4059-ADD8-D09C91BF0648}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96D0BB24-CF83-4059-ADD8-D09C91BF0648}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

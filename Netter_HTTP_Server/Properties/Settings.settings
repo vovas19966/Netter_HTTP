@@ -1,0 +1,146 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Netter_HTTP_Server.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LengthLong" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1000</Value>
+    </Setting>
+    <Setting Name="GroupIDs" Type="System.Int32[]" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfInt xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;int&gt;1&lt;/int&gt;
+  &lt;int&gt;2&lt;/int&gt;
+  &lt;int&gt;3&lt;/int&gt;
+&lt;/ArrayOfInt&gt;</Value>
+    </Setting>
+    <Setting Name="GroupTitles" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;Безопасность&lt;/string&gt;
+  &lt;string&gt;Климат&lt;/string&gt;
+  &lt;string&gt;Освещение&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="TypeTitles_of_SecurityGroup" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;Дверь&lt;/string&gt;
+  &lt;string&gt;Окно&lt;/string&gt;
+  &lt;string&gt;Пол&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="TypeTitles_of_ClimateGroup" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="TypeTitles_of_LightingGroup" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;Лампа&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="DefaultSearchTimer" Type="System.TimeSpan" Scope="User">
+      <Value Profile="(Default)">00:00:05</Value>
+    </Setting>
+    <Setting Name="TypeIDs_of_SecurityGroup" Type="System.Int32[]" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfInt xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;int&gt;1&lt;/int&gt;
+  &lt;int&gt;2&lt;/int&gt;
+  &lt;int&gt;3&lt;/int&gt;
+&lt;/ArrayOfInt&gt;</Value>
+    </Setting>
+    <Setting Name="TypeIDs_of_ClimateGroup" Type="System.Int32[]" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="TypeIDs_of_LightingGroup" Type="System.Int32[]" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfInt xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;int&gt;1&lt;/int&gt;
+&lt;/ArrayOfInt&gt;</Value>
+    </Setting>
+    <Setting Name="Door_Position" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;Открыто&lt;/string&gt;
+  &lt;string&gt;Закрыто&lt;/string&gt;
+  &lt;string&gt;Заблокировано&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="DefaultURI" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://localhost:8888/</Value>
+    </Setting>
+    <Setting Name="ProjectName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Netter</Value>
+    </Setting>
+    <Setting Name="ServerStatus" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;ON&lt;/string&gt;
+  &lt;string&gt;OFF&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="LengthShot" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="PostRequest_Operation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">oprt</Value>
+    </Setting>
+    <Setting Name="PostRequest_OperationValue" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;on&lt;/string&gt;
+  &lt;string&gt;off&lt;/string&gt;
+  &lt;string&gt;get&lt;/string&gt;
+  &lt;string&gt;set&lt;/string&gt;
+  &lt;string&gt;lp&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="OptionNumber_of_SecurityGroup" Type="System.Int32[]" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfInt xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;int&gt;8&lt;/int&gt;
+  &lt;int&gt;8&lt;/int&gt;
+&lt;/ArrayOfInt&gt;</Value>
+    </Setting>
+    <Setting Name="OptionNumber_of_ClimateGroup" Type="System.Int32[]" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="OptionNumber_of_LightingGroup" Type="System.Int32[]" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfInt xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;int&gt;8&lt;/int&gt;
+&lt;/ArrayOfInt&gt;</Value>
+    </Setting>
+    <Setting Name="DeleteTimerTitle" Type="System.String" Scope="User">
+      <Value Profile="(Default)">statustimer</Value>
+    </Setting>
+    <Setting Name="DefaultDeleteTimer" Type="System.TimeSpan" Scope="User">
+      <Value Profile="(Default)">00:00:15</Value>
+    </Setting>
+    <Setting Name="TimeOutMultiplication" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="MaxCountMessageLine" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">500</Value>
+    </Setting>
+    <Setting Name="AdminDeviceOptions" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;uri&lt;/string&gt;
+  &lt;string&gt;statustimer&lt;/string&gt;
+  &lt;string&gt;responsetimer&lt;/string&gt;
+  &lt;string&gt;pausetimer&lt;/string&gt;
+  &lt;string&gt;repeat&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="MaxNumberOfWaitingUsers" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="AdminLogin" Type="System.String" Scope="User">
+      <Value Profile="(Default)">admin</Value>
+    </Setting>
+    <Setting Name="AdminPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">admin</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,166 @@
+﻿<UserControl x:Class="Netter_HTTP_Server.CustomControls.GroupBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Netter_HTTP_Server.CustomControls"
+             mc:Ignorable="d" 
+             Name="userControl"
+             d:DesignHeight="300" d:DesignWidth="500">
+
+    <UserControl.Resources>
+        <Color x:Key="DefaulBackgroundColor" A="#ff" R="#1e" G="#1e" B="#1e"/>
+        <SolidColorBrush x:Key="DefaultBackgroundBrush" Color="{StaticResource DefaulBackgroundColor}"/>
+
+        <Color x:Key="DefaulColor" A="#ff" R="#1e" G="#1e" B="#1e"/>
+        <SolidColorBrush x:Key="DefaultBrush" Color="{StaticResource DefaulBackgroundColor}"/>
+
+        <SolidColorBrush x:Key="First_Brush" Color="{Binding First_Color, ElementName=userControl}"/>
+        <SolidColorBrush x:Key="Second_Brush" Color="{Binding Second_Color, ElementName=userControl}"/>
+
+        <LinearGradientBrush x:Key="BorderGradientBrush" EndPoint="0,1" StartPoint="0,0">
+            <GradientStop Color="{Binding First_Color, ElementName=userControl}" Offset="0"/>
+            <GradientStop Color="{Binding First_Color, ElementName=userControl}" Offset="0.5"/>
+            <GradientStop Color="{Binding Second_Color, ElementName=userControl}" Offset="1"/>
+        </LinearGradientBrush>
+
+<!--Border -->
+        <Style x:Key="StackPanel_Border_Style" TargetType="{x:Type Border}">
+            <Setter Property="Width" Value="Auto"/>
+            <Setter Property="Height" Value="Auto"/>
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="CornerRadius" Value="{Binding Radius, ElementName=userControl}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource BorderGradientBrush}"/>
+            <Setter Property="BorderThickness" Value="3"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsOpen, ElementName=userControl}" Value="false">
+                    <Setter Property="BorderBrush" Value="{StaticResource First_Brush}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+<!--Path-->        
+        <Style x:Key="Path_Style" TargetType="{x:Type Path}">
+            <Setter Property="Width" Value="Auto"/>
+            <Setter Property="Height" Value="Auto"/>
+            <Setter Property="Margin" Value="0.5,-5,0,0"/>
+            <Setter Property="RenderTransformOrigin" Value="1,1"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="StrokeThickness" Value="3"/>
+            <Setter Property="Fill" Value="{StaticResource DefaultBrush}"/>
+            <Setter Property="Data" Value=" M11.844,9.04L8.345,5.163c-0.195,-0.217 -0.511,-0.217 -0.705,0l-0.012,0.02L4.136,9.04c-0.195,0.217 -0.195,0.569 0,0.786l0.006,0.005C4.233,9.936 4.358,10 4.499,10h6.983c0.143,0 0.27,-0.068 0.359,-0.176l0.002,0.002C12.039,9.609 12.039,9.257 11.844,9.04z"/>
+        </Style>
+
+<!--Rectangle-->
+        <Style x:Key="Rectangle_Title_Style" TargetType="{x:Type Rectangle}">
+            <Setter Property="Width" Value="Auto"/>
+            <Setter Property="Height" Value="Auto"/>
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="Fill" Value="{StaticResource First_Brush}"/>
+        </Style>
+
+        <Style x:Key="Radius_Rectangle_Title_Style" TargetType="{x:Type Rectangle}" BasedOn="{StaticResource Rectangle_Title_Style}">
+            <Setter Property="RadiusX" Value="{Binding Radius, ElementName=userControl}"/>
+            <Setter Property="RadiusY" Value="{Binding Radius, ElementName=userControl}"/>
+        </Style>
+
+<!--Label-->
+        <Style x:Key="Title_Label_Style" TargetType="{x:Type Label}">
+            <Setter Property="Width" Value="Auto"/>
+            <Setter Property="Height" Value="Auto"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="{StaticResource DefaultBrush}"/>
+        </Style>
+
+        <Style x:Key="StackPanel_Title_Style" TargetType="{x:Type Label}">
+            <Setter Property="Width" Value="Auto"/>
+            <Setter Property="Height" Value="Auto"/>
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Label}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="15"/>
+                                <RowDefinition Height="15"/>
+                            </Grid.RowDefinitions>
+
+                            <Rectangle Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2"
+                                       Style="{StaticResource Radius_Rectangle_Title_Style}"/>
+                            <Rectangle Name="Rectangle" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                                       Style="{StaticResource Rectangle_Title_Style}"/>
+
+                            <Path x:Name="Path" Style="{StaticResource Path_Style}"
+                                  Grid.Row="0" Grid.RowSpan="2" Grid.Column="0">
+                                <Path.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform ScaleX="4.5" ScaleY="3.5"/>
+                                        <RotateTransform Angle="180" />
+                                    </TransformGroup>
+                                </Path.RenderTransform>
+                            </Path>
+
+                            <Label x:Name="TitleLabel" Content="{TemplateBinding Content}"
+                                   Grid.Row="0" Grid.RowSpan="2"  Grid.Column="1"
+                                   HorizontalAlignment="Left" Margin="5,0,5,0"
+                                   Style="{StaticResource Title_Label_Style}"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <DataTrigger Binding="{Binding ElementName=TitleLabel, Path=Content}" Value="">
+                                <Setter Property="Width" Value="0"/>
+                                <Setter Property="Height" Value="0"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding IsOpen, ElementName=userControl}" Value="false">
+                                <Setter TargetName="Rectangle" Property="Visibility" Value="Collapsed"/>
+                                <Setter TargetName="Path" Property="Margin" Value="35,7,0,0"/>
+                                <Setter TargetName="Path" Property="VerticalAlignment" Value="Center"/>
+                                <Setter TargetName="Path" Property="HorizontalAlignment" Value="Center"/>
+                                <Setter TargetName="Path" Property="RenderTransform">
+                                    <Setter.Value>
+                                        <TransformGroup>
+                                            <ScaleTransform ScaleX="4.5" ScaleY="3.5"/>
+                                            <RotateTransform Angle="0" />
+                                        </TransformGroup>
+                                    </Setter.Value>
+                                </Setter>
+                            </DataTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+<!--ContentPresenter-->        
+        <Style x:Key="ContentPresenter_Style" TargetType="{x:Type ContentPresenter}">
+            <Setter Property="Visibility" Value="Visible"/>
+            <Setter Property="Content" Value="{Binding MainContent, ElementName=userControl}"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsOpen, ElementName=userControl}" Value="false">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource StackPanel_Border_Style}" Panel.ZIndex="1"/>
+        <Label Grid.Row="0" Content="{Binding TitleContent, ElementName=userControl}" MouseLeftButtonDown="Label_MouseLeftButtonDown" Style="{StaticResource StackPanel_Title_Style}"/>
+
+        <ContentPresenter Name="Content" Grid.Row="1" Margin="10,5,10,8" Style="{StaticResource ContentPresenter_Style}"/>
+    </Grid>
+</UserControl>

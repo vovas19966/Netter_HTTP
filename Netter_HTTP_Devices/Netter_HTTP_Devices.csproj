@@ -211,6 +211,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Netter_HTTP_Server\Netter_HTTP_Server.csproj">
+      <Project>{96d0bb24-cf83-4059-add8-d09c91bf0648}</Project>
+      <Name>Netter_HTTP_Server</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Netter_HTTP_User\Netter_HTTP_User.csproj">
       <Project>{17d853c6-cbda-45b7-8d47-a6e60f5b10da}</Project>
       <Name>Netter_HTTP_User</Name>

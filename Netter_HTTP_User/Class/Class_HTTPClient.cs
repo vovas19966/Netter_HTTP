@@ -15,7 +15,8 @@ namespace Netter_HTTP_User
         private TimeSpan PauseTimer; //время паузы перед повторным запросом
         private TimeSpan ResponseTimeOut; //время ожидания ответа 
         private TimeSpan SaveResponseTimeOut; //время ожидания ответа 
-        
+
+
         private readonly Action<int, string> MessageOutput; //вывод сообщения на экран
 
         public Class_HTTPClient(Action<int, string> messageOutput)

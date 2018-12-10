@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{17D853C6-CBDA-45B7-8D47-A6E60F5B10DA}</ProjectGuid>
+    <ProjectGuid>{96D0BB24-CF83-4059-ADD8-D09C91BF0648}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Netter_HTTP_User</RootNamespace>
-    <AssemblyName>Netter_HTTP_User</AssemblyName>
+    <RootNamespace>Netter_HTTP_Server</RootNamespace>
+    <AssemblyName>Netter_HTTP_Server</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -55,40 +55,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Class\Class_HTTPClient.cs" />
-    <Compile Include="CustomControls\ControlButton.xaml.cs">
-      <DependentUpon>ControlButton.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="CustomControls\DeviceViewer.xaml.cs">
-      <DependentUpon>DeviceViewer.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="CustomControls\MenuButton.xaml.cs">
-      <DependentUpon>MenuButton.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="CustomControls\ScrollViewer.xaml.cs">
-      <DependentUpon>ScrollViewer.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="CustomControls\Title.xaml.cs">
-      <DependentUpon>Title.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="LightingPages\Page_Lighting_Lighting.xaml.cs">
-      <DependentUpon>Page_Lighting_Lighting.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="SecurityPages\Page_Security_Window.xaml.cs">
-      <DependentUpon>Page_Security_Window.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="SecurityPages\Page_Security_Door.xaml.cs">
-      <DependentUpon>Page_Security_Door.xaml</DependentUpon>
-    </Compile>
     <Page Include="CustomControls\ControlButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CustomControls\DeviceViewer.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
-    <Page Include="CustomControls\MenuButton.xaml">
+    <Page Include="CustomControls\GroupBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -100,10 +75,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -112,59 +83,36 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
+    <Compile Include="Class\Device.cs" />
+    <Compile Include="Class\HTTPServer.cs" />
+    <Compile Include="Class\DeviceList_Users_Admin.cs" />
+    <Compile Include="Class\Request.cs" />
+    <Compile Include="CustomControls\ControlButton.xaml.cs">
+      <DependentUpon>ControlButton.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\DeviceViewer.xaml.cs">
+      <DependentUpon>DeviceViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\GroupBox.xaml.cs">
+      <DependentUpon>GroupBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\ScrollViewer.xaml.cs">
+      <DependentUpon>ScrollViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\Title.xaml.cs">
+      <DependentUpon>Title.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Class\KeyValue.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="ClimatePages\Page_Climate.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="LightingPages\Page_Lighting.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="PageDeviceList.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="LightingPages\Page_Lighting_Lighting.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="SecurityPages\Page_Security_Window.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="SecurityPages\Page_Security.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="SecurityPages\Page_Security_Door.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="StyleResource.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClimatePages\Page_Climate.xaml.cs">
-      <DependentUpon>Page_Climate.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="LightingPages\Page_Lighting.xaml.cs">
-      <DependentUpon>Page_Lighting.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PageDeviceList.xaml.cs">
-      <DependentUpon>PageDeviceList.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="SecurityPages\Page_Security.xaml.cs">
-      <DependentUpon>Page_Security.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -182,6 +130,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -1,0 +1,123 @@
+﻿<UserControl x:Class="Netter_HTTP_Server.CustomControls.Title"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Netter_HTTP_Server.CustomControls"
+             mc:Ignorable="d" 
+             Name="userControl">
+
+    <UserControl.Resources>
+        <Color x:Key="DefaulBackgroundColor" A="#ff" R="#1e" G="#1e" B="#1e"/>
+        <SolidColorBrush x:Key="DefaultBackgroundBrush" Color="{StaticResource DefaulBackgroundColor}"/>
+
+        <Color x:Key="DefaulColor" A="#ff" R="#e1" G="#e1" B="#e1"/>
+        <SolidColorBrush x:Key="DefaultBrush" Color="{StaticResource DefaulColor}"/>
+
+        <Color x:Key="First_Border_Color" A="#ff" R="#e1" G="#e1" B="#e1"/>
+        <SolidColorBrush x:Key="First_DefaultBrush" Color="{StaticResource First_Border_Color}"/>
+        <Color x:Key="Second_Border_Color" A="#ff" R="#a1" G="#a1" B="#a1"/>
+        <SolidColorBrush x:Key="Second_DefaultBrush" Color="{StaticResource Second_Border_Color}"/>
+        <Color x:Key="Third_Border_Color" A="#ff" R="#51" G="#51" B="#51"/>
+        <SolidColorBrush x:Key="Third_DefaultBrush" Color="{StaticResource Third_Border_Color}"/>
+
+        <LinearGradientBrush x:Key="Separator_GradientBrush" EndPoint="1,0" StartPoint="0,0">
+            <GradientStop Color="{StaticResource First_Border_Color}" Offset="0"/>
+            <GradientStop Color="{StaticResource First_Border_Color}" Offset="0.47"/>
+            <GradientStop Color="{StaticResource DefaulBackgroundColor}" Offset="0.48"/>
+            <GradientStop Color="{StaticResource DefaulBackgroundColor}" Offset="0.52"/>
+            <GradientStop Color="{StaticResource Second_Border_Color}" Offset="0.53"/>
+            <GradientStop Color="{StaticResource Third_Border_Color}" Offset="1"/>
+        </LinearGradientBrush>
+
+        <SolidColorBrush x:Key="First_Brush" Color="{Binding First_Color, ElementName=userControl}"/>
+        <SolidColorBrush x:Key="Second_Brush" Color="{Binding Second_Color, ElementName=userControl}"/>
+        <SolidColorBrush x:Key="Third_Brush" Color="{Binding Third_Color, ElementName=userControl}"/>
+        <SolidColorBrush x:Key="Fourth_Brush" Color="{Binding Fourth_Color, ElementName=userControl}"/>
+
+        <LinearGradientBrush x:Key="BackGround_GradientBrush" EndPoint="1,1" StartPoint="0,0">
+            <GradientStop Color="{Binding First_Color, ElementName=userControl}" Offset="0"/>
+            <GradientStop Color="{Binding Second_Color, ElementName=userControl}" Offset="1"/>
+        </LinearGradientBrush>
+
+        <!--Rectangle-->
+        <Style x:Key="Rectangle_Style" TargetType="{x:Type Rectangle}">
+            <Setter Property="Width" Value="Auto"/>
+            <Setter Property="Height" Value="Auto"/>
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="RadiusX" Value="0"/>
+            <Setter Property="RadiusY" Value="0"/>
+            <Setter Property="Fill" Value="{StaticResource BackGround_GradientBrush}"/>
+        </Style>
+
+        <Style x:Key="Rectangle_Radius_Style" TargetType="{x:Type Rectangle}" BasedOn="{StaticResource Rectangle_Style}">
+            <Setter Property="RadiusX" Value="10"/>
+            <Setter Property="RadiusY" Value="10"/>
+        </Style>
+
+        <Style x:Key="Rectangle_Separator_Style" TargetType="{x:Type Rectangle}" BasedOn="{StaticResource Rectangle_Style}">
+            <Setter Property="RadiusX" Value="5"/>
+            <Setter Property="RadiusY" Value="5"/>
+        </Style>
+
+        <!--Label-->
+        <Style TargetType="{x:Type Label}">
+            <Setter Property="Width" Value="Auto"/>
+            <Setter Property="Height" Value="Auto"/>
+            <Setter Property="FontFamily" Value="Segoe UI Black"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Style.Triggers>
+                <Trigger Property="Content" Value="">
+                    <Setter Property="Width" Value="0"/>
+                    <Setter Property="Height" Value="0"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle Grid.Column="0" Grid.Row="0"
+                   Style="{StaticResource Rectangle_Style}"/>
+
+        <Rectangle Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" Grid.RowSpan="2" Margin="0,0,5,0"
+                   Style="{StaticResource Rectangle_Radius_Style}"/>
+
+        <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" Margin="0,0,5,0">
+            <!--Propject Name-->
+            <Label Content="{Binding MainTitle, ElementName=userControl}"
+                   Margin="10,-10,0,0"
+                   FontSize="50" Foreground="{StaticResource Third_Brush}"/>
+            <!--Group Name-->
+            <Label Content="{Binding GroupTitle, ElementName=userControl}"
+                   Margin="0,-10,0,0"
+                   FontSize="15" Foreground="{StaticResource Third_Brush}"/>
+            <!--Type Name-->
+            <Label Content="{Binding TypeTitle, ElementName=userControl}"
+                   Margin="0,-10,0,0"
+                   FontSize="15" Foreground="{StaticResource Third_Brush}"/>
+            <!--Device ID-->
+            <Label Content="{Binding IDTitle, ElementName=userControl}"
+                   Margin="0,-10,0,0"
+                   FontSize="20" Foreground="{StaticResource Fourth_Brush}"/>
+        </StackPanel>
+
+
+        <Rectangle Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" Width="10" Margin="0,20"
+                   Style="{StaticResource Rectangle_Separator_Style}"
+                   Fill="{StaticResource Separator_GradientBrush}"/>
+    </Grid>
+</UserControl>
+

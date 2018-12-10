@@ -1,0 +1,253 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Netter_HTTP_Server">
+
+<!--Color|Brush-->
+    <Color x:Key="BackgroundColor" A="#ff" R="#1e" G="#1e" B="#1e"/>
+    <SolidColorBrush x:Key="BackgroundBrush" Color="{StaticResource BackgroundColor}"/>
+
+    <Color x:Key="BorderColor" A="#ff" R="#e1" G="#e1" B="#e1"/>
+    <SolidColorBrush x:Key="BorderBrush" Color="{StaticResource BorderColor}"/>
+
+    <Color x:Key="ActiveBorderGroupColor" A="#ff" R="#00" G="#e1" B="#00"/>
+    <SolidColorBrush x:Key="ActiveBorderBrush" Color="{StaticResource ActiveBorderGroupColor}"/>
+
+    <Color x:Key="ImageColor" A="#ff" R="#e1" G="#e1" B="#e1"/>
+    <SolidColorBrush x:Key="ImageBrush" Color="{StaticResource ImageColor}"/>
+
+    <Color x:Key="ScrollViewerColor" A="#ff" R="#e1" G="#e1" B="#e1"/>
+    <SolidColorBrush x:Key="ScrollViewerBrush" Color="{StaticResource ScrollViewerColor}"/>
+
+    <Color x:Key="TextColor" A="#ff" R="#e1" G="#e1" B="#e1"/>
+    <SolidColorBrush x:Key="TextBrush" Color="{StaticResource TextColor}"/>
+    <Color x:Key="TextBorderColor" A="#ff" R="#1e" G="#1e" B="#1e"/>
+    <SolidColorBrush x:Key="TextBorderBrush" Color="{StaticResource TextBorderColor}"/>
+    <Color x:Key="TextTitleColor" A="#ff" R="#00" G="#ff" B="#ff"/>
+    <SolidColorBrush x:Key="TextTitleBrush" Color="{StaticResource TextTitleColor}"/>
+    <Color x:Key="TextIDColor" A="#ff" R="#ff" G="#00" B="#ff"/>
+    <SolidColorBrush x:Key="TextIDBrush" Color="{StaticResource TextIDColor}"/>
+
+
+<!-- Border Gradients -->
+    <Color x:Key="Orange_First_Color" A="#ff" R="#f7" G="#a8" B="#22"/>
+    <Color x:Key="Orange_Second_Color" A="#ff" R="#e8" G="#33" B="#28"/>
+    <SolidColorBrush x:Key="Orange_First_Brush" Color="{StaticResource Orange_First_Color}"/>
+    <SolidColorBrush x:Key="Orange_Second_Brush" Color="{StaticResource Orange_Second_Color}"/>
+    <LinearGradientBrush x:Key="Orange_GradientBrush" EndPoint="1,1" StartPoint="0,0">
+        <GradientStop Color="{StaticResource Orange_First_Color}" Offset="0"/>
+        <GradientStop Color="{StaticResource Orange_Second_Color}" Offset="1"/>
+    </LinearGradientBrush>
+
+    <Color x:Key="Aqua_First_Color" A="#ff" R="#57" G="#f3" B="#c4"/>
+    <Color x:Key="Aqua_Second_Color" A="#ff" R="#53" G="#ca" B="#e0"/>
+    <SolidColorBrush x:Key="Aqua_First_Brush" Color="{StaticResource Aqua_First_Color}"/>
+    <SolidColorBrush x:Key="Aqua_Second_Brush" Color="{StaticResource Aqua_Second_Color}"/>
+    <LinearGradientBrush x:Key="Aqua_GradientBrush" EndPoint="1,1" StartPoint="0,0">
+        <GradientStop Color="{StaticResource Aqua_First_Color}" Offset="0"/>
+        <GradientStop Color="{StaticResource Aqua_Second_Color}" Offset="1"/>
+    </LinearGradientBrush>
+
+    <Color x:Key="Blue_First_Color" A="#ff" R="#43" G="#c5" B="#f6"/>
+    <Color x:Key="Blue_Second_Color" A="#ff" R="#31" G="#59" B="#c4"/>
+    <SolidColorBrush x:Key="Blue_First_Brush" Color="{StaticResource Blue_First_Color}"/>
+    <SolidColorBrush x:Key="Blue_Second_Brush" Color="{StaticResource Blue_Second_Color}"/>
+    <LinearGradientBrush x:Key="Blue_GradientBrush" EndPoint="1,1" StartPoint="0,0">
+        <GradientStop Color="{StaticResource Blue_First_Color}" Offset="0"/>
+        <GradientStop Color="{StaticResource Blue_Second_Color}" Offset="1"/>
+    </LinearGradientBrush>
+
+    <Color x:Key="Yellow_First_Color" A="#ff" R="#f5" G="#dd" B="#45"/>
+    <Color x:Key="Yellow_Second_Color" A="#ff" R="#fd" G="#6d" B="#0d"/>
+    <SolidColorBrush x:Key="Yellow_First_Brush" Color="{StaticResource Yellow_First_Color}"/>
+    <SolidColorBrush x:Key="Yellow_Second_Brush" Color="{StaticResource Yellow_Second_Color}"/>
+    <LinearGradientBrush x:Key="Yellow_GradientBrush" EndPoint="1,1" StartPoint="0,0">
+        <GradientStop Color="{StaticResource Yellow_First_Color}" Offset="0"/>
+        <GradientStop Color="{StaticResource Yellow_Second_Color}" Offset="1"/>
+    </LinearGradientBrush>
+
+    <Color x:Key="Green_First_Color" A="#ff" R="#bb" G="#d6" B="#2a"/>
+    <Color x:Key="Green_Second_Color" A="#ff" R="#01" G="#93" B="#45"/>
+    <SolidColorBrush x:Key="Green_First_Brush" Color="{StaticResource Green_First_Color}"/>
+    <SolidColorBrush x:Key="Green_Second_Brush" Color="{StaticResource Green_Second_Color}"/>
+    <LinearGradientBrush x:Key="Green_GradientBrush" EndPoint="1,1" StartPoint="0,0">
+        <GradientStop Color="{StaticResource Green_First_Color}" Offset="0"/>
+        <GradientStop Color="{StaticResource Green_Second_Color}" Offset="1"/>
+    </LinearGradientBrush>
+
+    <Color x:Key="Red_First_Color" A="#ff" R="#e4" G="#44" B="#46"/>
+    <Color x:Key="Red_Second_Color" A="#ff" R="#a1" G="#1d" B="#32"/>
+    <SolidColorBrush x:Key="Red_First_Brush" Color="{StaticResource Red_First_Color}"/>
+    <SolidColorBrush x:Key="Red_Second_Brush" Color="{StaticResource Red_Second_Color}"/>
+    <LinearGradientBrush x:Key="Red_GradientBrush" EndPoint="1,1" StartPoint="0,0">
+        <GradientStop Color="{StaticResource Red_First_Color}" Offset="0"/>
+        <GradientStop Color="{StaticResource Red_Second_Color}" Offset="1"/>
+    </LinearGradientBrush>
+
+
+    <LinearGradientBrush x:Key="Red_Gra1dientBrush" EndPoint="1,1" StartPoint="0,0">
+        <GradientStop Color="#FF3159C4" Offset="0"/>
+        <GradientStop Color="{StaticResource Red_Second_Color}" Offset="1"/>
+    </LinearGradientBrush>
+
+
+    <!-- Path -->
+<!-- Закрыть -->
+    <Style x:Key="Path_Exit_Style" TargetType="{x:Type Path}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="StrokeThickness" Value="3"/>
+        <Setter Property="Data">
+            <Setter.Value>
+                <PathGeometry>
+                    <PathFigure StartPoint="1,1">
+                        <LineSegment Point="15,15" />
+                    </PathFigure>
+                    <PathFigure StartPoint="15,1">
+                        <LineSegment Point="1,15" />
+                    </PathFigure>
+                </PathGeometry>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+<!-- ВКЛ/ВЫКЛ -->
+    <Style x:Key="Path_ONOFF_Style" TargetType="{x:Type Path}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="StrokeThickness" Value="3"/>
+        <Setter Property="Data">
+            <Setter.Value>
+                <PathGeometry>
+                    <PathFigure StartPoint="8,0">
+                        <LineSegment Point="8,7" />
+                    </PathFigure>
+                    <!-- контур термометра -->
+                    <PathFigure StartPoint="3,4">
+                        <ArcSegment Point="13,4" Size="7,7" IsLargeArc="true" SweepDirection="Counterclockwise" />
+                    </PathFigure>
+                </PathGeometry>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--Очистка-->
+    <Style x:Key="Path_Clear_Style" TargetType="{x:Type Path}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="StrokeThickness" Value="3"/>
+        <Setter Property="Data">
+            <Setter.Value>
+                <PathGeometry>
+                    <PathFigure StartPoint="8,15">
+                        <LineSegment Point="3,15"/>
+                        <LineSegment Point="3,3"/>
+                        <LineSegment Point="13,3"/>
+                        <LineSegment Point="13,15"/>
+                        <LineSegment Point="8,15"/>
+                    </PathFigure>
+                    <PathFigure StartPoint="0,2">
+                        <LineSegment Point="16,2"/>
+                    </PathFigure>
+                    <PathFigure StartPoint="6,1">
+                        <LineSegment Point="10,1"/>
+                    </PathFigure>
+                </PathGeometry>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+<!--Label-->
+    <Style x:Key="Label_Style" TargetType="{x:Type Label}">
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="FontFamily" Value="Segoe UI"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
+    </Style>
+
+    <Style x:Key="Label_Value_Style" TargetType="{x:Type Label}" BasedOn="{StaticResource Label_Style}">
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}"/>
+        <Setter Property="BorderThickness" Value="0,0,0,1.5"/>
+    </Style>
+
+    <Style x:Key="Label_Status_Style" TargetType="{x:Type Label}">
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="FontFamily" Value="Segoe UI"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
+        <Style.Triggers>
+            <Trigger Property="Content" Value="ON">
+                <Setter Property="Foreground" Value="{StaticResource Green_Second_Brush}"/>
+            </Trigger>
+            <Trigger Property="Content" Value="OFF">
+                <Setter Property="Foreground" Value="{StaticResource Red_First_Brush}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- Border -->
+    <Style x:Key="Border Style" TargetType="{x:Type Border}">
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="Margin" Value="3"/>
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="CornerRadius" Value="5"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="BorderThickness" Value="3"/>
+                <Setter Property="Margin" Value="3,2"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+
+    <!--TextBox-->
+    <Style x:Key="TextBox_Style" TargetType="{x:Type TextBox}">
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="MaxHeight" Value="100"/>
+        <Setter Property="FontFamily" Value="Segoe UI"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="3,2"/>
+        <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}"/>
+        <Setter Property="Background" Value="{StaticResource BackgroundBrush}"/>
+    </Style>
+    <Style x:Key="Bold_TextBox_Style" TargetType="{x:Type TextBox}" BasedOn="{StaticResource TextBox_Style}">
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="BorderThickness" Value="0"/>
+    </Style>
+
+    <Style x:Key="TextBox_MultiLine_Style" TargetType="{x:Type TextBox}">
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="FontFamily" Value="Segoe UI"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="3,2"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}"/>
+        <Setter Property="Background" Value="{StaticResource BackgroundBrush}"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="AcceptsReturn" Value="True"/>
+        <!-- разрешение на ввод enter -->
+        <Setter Property="HorizontalScrollBarVisibility" Value="Disabled"/>
+        <Setter Property="VerticalScrollBarVisibility" Value="Auto"/>
+    </Style>
+    <Style x:Key="Bold_TextBox_MultiLine_Style" TargetType="{x:Type TextBox}" BasedOn="{StaticResource TextBox_MultiLine_Style}">
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="MaxHeight" Value="100"/>
+    </Style>
+</ResourceDictionary>

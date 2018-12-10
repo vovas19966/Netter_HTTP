@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Netter_HTTP_Server.MainWindow">
+    <Position X="3.25" Y="2" Width="2.5" />
+    <InheritanceLine Type="System.Windows.Window" FixedToPoint="true">
+      <Path>
+        <Point X="4" Y="1.441" />
+        <Point X="4" Y="1.7" />
+        <Point X="5.188" Y="1.7" />
+        <Point X="5.188" Y="2" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AKCAAAAAgAEJAAAABBAAAAAEZAAIAAICACAQAgAEAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Netter_HTTP_Server.Device" BaseTypeListCollapsed="true">
+    <Position X="6.25" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QAQRAAACAIABAQAgAYABAAAAwAAAAgAgAAAAMABEBoA=</HashCode>
+      <FileName>Class\Device.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Netter_HTTP_Server.DeviceList_Users_Admin" BaseTypeListCollapsed="true">
+    <Position X="8.75" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAIgAARCAAAAEBBABJAABQAA4IABAQwAAQAAggAAAAA=</HashCode>
+      <FileName>Class\DeviceList_Users_Admin.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Netter_HTTP_Server.HTTPServer" BaseTypeListCollapsed="true">
+    <Position X="11.5" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAhCACAgCAACEJEBAAAAqCAAAACQIICAAgAMAAA=</HashCode>
+      <FileName>Class\HTTPServer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Netter_HTTP_Server.KeyValue" BaseTypeListCollapsed="true">
+    <Position X="8.75" Y="9" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAABQEAAAAAAAAgAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Class\KeyValue.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Netter_HTTP_Server.Request">
+    <Position X="11.5" Y="9.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAgAAAAAAQAAAAAAAAAAAAAAAAACAAAAI=</HashCode>
+      <FileName>Class\Request.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Windows.Window" Collapsed="true">
+    <Position X="3.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
